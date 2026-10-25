@@ -38,7 +38,11 @@ Baseline time-use statistics are weighted aggregates (means, SDs, percentiles, p
 
 Sarah M. Flood, Liana C. Sayer, and Daniel Backman. American Time Use Survey Data Extract Builder: Version 3.3 [dataset]. College Park, MD: University of Maryland and Minneapolis, MN: IPUMS, 2025. https://doi.org/10.18128/D060.V3.3
 
-Underlying ATUS data are provided by the U.S. Bureau of Labor Statistics. IPUMS ATUS microdata are not redistributed in this repository; obtain them from https://www.atusdata.org under the IPUMS terms of use.
+Online resource citation: IPUMS ATUS, University of Minnesota, www.ipums.org.
+
+Underlying ATUS source data are provided by the U.S. Bureau of Labor Statistics (survey conducted by the U.S. Census Bureau for BLS). IPUMS ATUS microdata are not redistributed in this repository; obtain them from https://www.atusdata.org under the IPUMS terms of use. Use of these data does not imply endorsement by IPUMS, BLS, or the Census Bureau.
+
+Citation guidance: https://www.atusdata.org/atus/citation.shtml. Publications or educational materials using these data should be added to the IPUMS bibliography: https://bibliography.ipums.org/.
 
 MET values: Herrmann SD et al. 2024 Adult Compendium of Physical Activities, J Sport Health Sci, https://doi.org/10.1016/j.jshs.2023.10.010.
 
