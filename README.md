@@ -32,7 +32,19 @@ npm run typecheck
 npm run build
 ```
 
+## Data sources and attribution
+
+Baseline time-use statistics are weighted aggregates (means, SDs, percentiles, participation rates; no individual records) derived from:
+
+Sarah M. Flood, Liana C. Sayer, and Daniel Backman. American Time Use Survey Data Extract Builder: Version 3.3 [dataset]. College Park, MD: University of Maryland and Minneapolis, MN: IPUMS, 2025. https://doi.org/10.18128/D060.V3.3
+
+Underlying ATUS data are provided by the U.S. Bureau of Labor Statistics. IPUMS ATUS microdata are not redistributed in this repository; obtain them from https://www.atusdata.org under the IPUMS terms of use.
+
+MET values: Herrmann SD et al. 2024 Adult Compendium of Physical Activities, J Sport Health Sci, https://doi.org/10.1016/j.jshs.2023.10.010.
+
+Body diagram: react-body-highlighter (MIT); see THIRD_PARTY_NOTICES.md.
+
 ## CI / deploy
 
-- `.github/workflows/ci.yml` — format, lint, typecheck, test (incl. release guard + golden criterion), build
+- `.github/workflows/ci.yml` — format, lint, microdata guard (CASEID/PERNUM), typecheck, test (incl. release guard + golden criterion), build
 - `.github/workflows/pages.yml` — deploy `dist/` to GitHub Pages on `main`
