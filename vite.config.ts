@@ -4,7 +4,8 @@ import { defineConfig } from 'vitest/config';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/body/',
+  // GitHub Pages path for github.com/vasilismavratsas/Body
+  base: '/Body/',
   test: {
     environment: 'jsdom',
     globals: true,
