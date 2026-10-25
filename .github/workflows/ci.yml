@@ -13,6 +13,7 @@ jobs:
   check:
     name: Lint, typecheck, test, build
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -33,8 +34,14 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
-      - name: Test
-        run: npm test
+      - name: Unit tests (vitest)
+        run: npm run test:unit
+
+      # Separate step: long Monte Carlo golden must not share a vitest worker
+      # with the unit suite (avoids "Timeout calling onTaskUpdate" flakes).
+      - name: Golden criterion (8 seeds, nDraws 4000)
+        run: npm run test:golden
+        timeout-minutes: 20
 
       - name: Build
         run: npm run build

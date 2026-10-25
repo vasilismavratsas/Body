@@ -10,13 +10,18 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     include: ['src/**/*.{test,spec}.{ts,tsx}'],
-    // Golden criterion (~60s) can trip the default worker RPC heartbeat on CI
-    // runners ("Timeout calling onTaskUpdate") even when all tests pass.
+    // Durable CI fix for vitest-worker "Timeout calling onTaskUpdate":
+    // one worker, no file parallelism, aggressive timeouts. Long Monte Carlo
+    // golden work runs outside vitest via `npm run test:golden` (separate CI step).
+    // Avoid singleFork: it shares one jsdom across files and breaks RTL queries.
     pool: 'forks',
     fileParallelism: false,
+    maxWorkers: 1,
+    minWorkers: 1,
     testTimeout: 600_000,
-    hookTimeout: 120_000,
-    teardownTimeout: 120_000,
+    hookTimeout: 300_000,
+    teardownTimeout: 300_000,
+    slowTestThreshold: 15_000,
     reporters: process.env.CI ? ['dot'] : ['default'],
   },
 });

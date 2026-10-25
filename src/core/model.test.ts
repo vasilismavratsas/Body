@@ -18,7 +18,7 @@ import {
   simulateDay,
   type DayRow,
 } from './model';
-import { GOLDEN_SEEDS, runGoldenSeed } from './goldenCriterion';
+import { GOLDEN_SEEDS } from './goldenCriterion';
 import { parseDemoOutput } from './parseDemoOutput';
 import snapshot from './snapshots/seed2026-calibration.json';
 
@@ -239,12 +239,6 @@ describe('TS-vs-R golden criterion wiring (spec §10 v0.7)', () => {
     expect(demo.meta.lowN.length).toBeGreaterThanOrEqual(5);
     expect(GOLDEN_SEEDS).toHaveLength(8);
   });
-
-  it('smoke: golden helper passes for seed 2', () => {
-    const scenarios = [...new Set(demo.rows.map((r) => r.scenario))];
-    const { failures } = runGoldenSeed(input, demo.rows, scenarios, GOLDEN_SEEDS[0]);
-    expect(failures).toEqual([]);
-  }, 30_000);
 
   it('can regenerate seed-2026 snapshot when BODY_REGEN_SNAPSHOT=1', () => {
     if (process.env.BODY_REGEN_SNAPSHOT !== '1') return;

@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -28,8 +29,12 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Release guard + tests
-        run: npm test
+      - name: Unit tests (vitest)
+        run: npm run test:unit
+
+      - name: Golden criterion (8 seeds, nDraws 4000)
+        run: npm run test:golden
+        timeout-minutes: 20
 
       - name: Build
         run: npm run build
