@@ -1,12 +1,16 @@
 import { useCallback, useEffect, useState } from 'react';
+import type { Intensity } from '../data/schemas';
 
 export type DayEntry = {
   id: string;
   activityId: string;
   minutes: number;
+  /** Lift id when activityId is weightlifting (spec §14). */
+  exercise?: string;
+  intensity?: Intensity;
 };
 
-const STORAGE_KEY = 'body.alpha.entries';
+const STORAGE_KEY = 'body.alpha.entries.v07';
 
 type Stored = { date: string; entries: DayEntry[] };
 
@@ -45,6 +49,13 @@ function msUntilMidnight(): number {
   return next.getTime() - now.getTime();
 }
 
+export type AddEntryInput = {
+  activityId: string;
+  minutes: number;
+  exercise?: string;
+  intensity?: Intensity;
+};
+
 export function useTodayEntries() {
   const [entries, setEntries] = useState<DayEntry[]>(() => load());
 
@@ -62,13 +73,15 @@ export function useTodayEntries() {
     };
   }, [entries]);
 
-  const add = useCallback((activityId: string, minutes: number) => {
+  const add = useCallback((input: AddEntryInput) => {
     setEntries((prev) => [
       ...prev,
       {
         id: `${String(Date.now())}-${Math.random().toString(36).slice(2, 8)}`,
-        activityId,
-        minutes,
+        activityId: input.activityId,
+        minutes: input.minutes,
+        ...(input.exercise ? { exercise: input.exercise } : {}),
+        ...(input.intensity ? { intensity: input.intensity } : {}),
       },
     ]);
   }, []);

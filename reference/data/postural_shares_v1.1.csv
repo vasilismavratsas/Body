@@ -23,4 +23,3 @@ lying,core,0.0423,1,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",n
 lying,lower_back,0.0423,1,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",near-rest; equal tone -> pure mass weighting
 lying,hips_glutes,0.1443,1,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",near-rest; equal tone -> pure mass weighting
 lying,legs,0.4329,1,0.4329,ASSUMPTION,low,"share_1 (mass x index, normalized)",near-rest; equal tone -> pure mass weighting
-

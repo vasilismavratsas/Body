@@ -1,9 +1,10 @@
 {
   "seed": 2026,
   "nDraws": 4000,
-  "sd": 4.13,
-  "p10": 28.08,
-  "p50": 32.27,
-  "p90": 38.39,
-  "note": "TS engine own snapshot (seed 2026); R reference 4.13/28.05/32.15/38.35 is not a test target"
+  "modelVersion": "0.7",
+  "sd": 4.063534,
+  "p10": 28.080237,
+  "p50": 32.281384,
+  "p90": 38.162798,
+  "note": "TS engine own snapshot (spec §10); R 4.16/27.91/38.16 are reference only"
 }

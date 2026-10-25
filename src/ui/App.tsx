@@ -1,23 +1,31 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { ExtraMinutes, PartResult } from '../core/model';
+import type { DayRow, PartResult } from '../core/model';
+import { dayToExtra, prepareModelInput } from '../core/model';
 import { runModelInWorker } from '../core/runInWorker';
+import { activities, baseline, bodyParts, modelConfig, shareRows } from '../data/load';
 import type { PartId } from '../data/schemas';
 import { ActivityEntry } from './ActivityEntry';
 import { BodyMap } from './BodyMap';
 import { DetailPanel } from './DetailPanel';
 import { MethodsPage } from './MethodsPage';
 import { mostlyAssumptionByPart } from './shareAssumption';
-import { useTodayEntries } from './useTodayEntries';
+import { useTodayEntries, type DayEntry } from './useTodayEntries';
 
-function entriesToExtra(
-  entries: { activityId: string; minutes: number }[],
-): ExtraMinutes | null {
-  if (entries.length === 0) return null;
-  const extra: ExtraMinutes = {};
-  for (const e of entries) {
-    extra[e.activityId] = (extra[e.activityId] ?? 0) + e.minutes;
-  }
-  return extra;
+const modelInput = prepareModelInput(
+  bodyParts,
+  shareRows,
+  activities,
+  baseline,
+  modelConfig,
+);
+
+function entriesToDay(entries: DayEntry[]): DayRow[] {
+  return entries.map((e) => ({
+    activity: e.activityId,
+    minutes: e.minutes,
+    ...(e.exercise ? { exercise: e.exercise } : {}),
+    ...(e.intensity ? { intensity: e.intensity } : {}),
+  }));
 }
 
 export function App() {
@@ -48,7 +56,14 @@ export function App() {
     const ac = new AbortController();
     setLoading(true);
     setError(null);
-    const extra = entriesToExtra(entries);
+    let extra = null;
+    try {
+      extra = dayToExtra(entriesToDay(entries), modelInput);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+      setLoading(false);
+      return;
+    }
     void runModelInWorker(extra, { signal: ac.signal })
       .then((r) => {
         if (ac.signal.aborted) return;
@@ -139,7 +154,7 @@ export function App() {
       )}
 
       <footer className="foot">
-        Alpha v0.6.1 · IPUMS ATUS aggregates only ·{' '}
+        Alpha v0.7 · IPUMS ATUS aggregates only ·{' '}
         <a href="#methods">Methods &amp; citations</a>
       </footer>
     </div>

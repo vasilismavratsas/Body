@@ -1,5 +1,5 @@
-# Body alpha: data model v0.6.1 (folds in spec.md v0.6.1, model.R v0.6.1; older sections kept for history, later sections supersede earlier ones)
-Every number carries a status (cited | stand-in | ASSUMPTION | GAP); the release guard fails on GAP or PLACEHOLDER. Current values come from model.R v0.6.1.
+# Body alpha: data model v0.7 (folds in spec.md v0.7, model.R v0.7; older sections kept for history, later sections supersede earlier ones)
+Every number carries a status (cited | stand-in | ASSUMPTION | GAP); the release guard fails on GAP or PLACEHOLDER. Current values come from model.R v0.7.
 
 ## Data files (src/data, versioned, every value has sourceRefs)
 - bodyParts.json: 8 ids (arms, shoulders, chest, upper_back, core, lower_back, hips_glutes, legs), label, muscleMassFraction (scales the additive offset F_p).
@@ -49,7 +49,7 @@ Every number carries a status (cited | stand-in | ASSUMPTION | GAP); the release
 - baseline.json, per ATUS group: activityId, atusCode, compendiumCode, met, minutes {mean, sd, median, p10, p90}, participationRate (0–1), n, status "cited", sourceRefs. Top level: population "IPUMS ATUS 2024, adults 18+, WT06, 0 min ATUS 1301", designEffect 1.5 (status ASSUMPTION), perPersonGross {sd 4.40, p10 28.22, p50 32.60, p90 38.80}.
 - M uses the MEAN day: minutes_g ~ Gamma(mean_g, SE_g), SE_g = sd_g / sqrt(n / designEffect), then rescaled to 1440. Day-to-day spread is not in M.
 - New optional output per part: typicalityPercentile (0–100) = % of simulated individual non-exerciser days (zero-inflated Gamma per group: Bernoulli(participationRate) × Gamma moment-matched to mean/sd, groups independent, rescaled to 1440; same MET and share draws) with part work below the user's median part work. Shown separately from the colour; not a flag.
-- Calibration tests (HARD, see spec.md §10). (1) Any-seed bands on simulated individual-day gross MET-h/day: SD [3.90, 4.40], p10 [27.6, 28.4], p90 [37.6, 38.8]. (2) Survey validity: |SD−4.40|/4.40 ≤ 0.10, |p10−28.22| ≤ 1.0, |p90−38.80| ≤ 1.0. (3) Seed 2026 reproduces the TS engine's own committed snapshot to ±0.01. The R seed-2026 values 4.13 / 28.05 / 38.35 are reference only.
+- Calibration tests (HARD, see spec.md §10). (1) Any-seed bands on simulated individual-day gross MET-h/day: SD [3.90, 4.40], p10 [27.6, 28.4], p90 [37.6, 38.8]. (2) Survey validity: |SD−4.40|/4.40 ≤ 0.10, |p10−28.22| ≤ 1.0, |p90−38.80| ≤ 1.0. (3) Seed 2026 reproduces the TS engine's own committed snapshot to ±0.01. The R seed-2026 values 4.16 / 27.91 / 38.16 (v0.7) are reference only.
 
 ### Changelog
 - 2026-10-24: Mathematician edited this file for model.R v0.6 (mean-day reference, SE with design effect, baseline fields, typicality percentile).
@@ -63,3 +63,32 @@ Every number carries a status (cited | stand-in | ASSUMPTION | GAP); the release
 
 - Changelog: the Mathematician removed stale v0.2 text (PLACEHOLDER header, max-floor, MET truncation, 15+ label) and bumped the version to v0.6.1.
 
+## v0.7 (Mathematician, Oct 24): supersedes activities.json "final list pending"
+Source CSVs, used by model.R v0.7. Header-only templates are in templates/*_TEMPLATE.csv.
+- **activity_catalog.csv**: activity_id, share_row, met_file (mets.csv | activities25_mets.csv), met_id (row id in met_file), mapping_status, note. 25 rows. yard_work → yard_work shares and mets.csv `yard` (08261, 4.0) was confirmed by the Researcher (method_log step 44, r2_13). Becomes activities.json.
+- **activation_shares_v2.1.csv** and **postural_shares_v1.1.csv** (long format): activity_id, part, share (check only), index_pctMVC, mass_fraction, status, confidence, method, source.
+- **activities25_mets.csv**: activity_id, default_code, default_MET, median_MET_across_codes, MET_range_across_codes ("lo-hi (range, not SD)"), codes, source. met.sigmaLog = ln(hi/lo)/3.196, status ASSUMPTION.
+- **activities25_selection.csv**: activity_id, unweighted_n, … The lowN flag applies when n < 10.
+- **lift_shares.csv** (derived from lifts_v1.1.csv by derive_lift_tables.R, long format): exercise_id, parent ("weightlifting"), part, index_pctMVC, mass_fraction, status, source, share. share = mass × activation (assumed indices ×2), normalized per lift and stored so the sum-to-1 check runs.
+- **status counts (v0.7):** activation_shares_v2.1.csv: ASSUMPTION 183/200, cited 8, stand-in 9. lift_shares.csv: ASSUMPTION 105/112, cited 7. Combined: 288/312.
+- **status enum** (all share files): `cited` (index from published EMG %MVIC; the Researcher's "cited+derived" maps to cited), `stand-in` (index from a related activity or muscle), `ASSUMPTION` (assumed index, rescaled ×2). Release guard: GAP and PLACEHOLDER are not allowed.
+- **lift_mets.csv**: exercise_id, intensity (light | moderate | vigorous), compendium_code, MET, is_default (TRUE/FALSE, exactly one per lift: moderate for back_squat, deadlift, plank, push_up, where plank and push_up have one code for all levels; light for the other 10), status, source.
+- **baseline_row_map.csv**: activity_id (ATUS group), share_row, mapping_status, note.
+
+activities.json, v0.7 fields per entry: id, name, kind ("activity" | "liftParent"), compendiumCode, met {median, sigmaLog, sigmaSource: "cv0.20" | "range89"}, shareRow, lowN (bool), sourceRefs. A liftParent entry has children [{exerciseId, shares {index: {part: %MVIC on one scale}, mass}, metByIntensity {light, moderate, vigorous: {code, MET}}, defaultIntensity}].
+
+shares rule (core, one formula): idx' = idx × 2 when cell status = ASSUMPTION, otherwise idx; sbar_p = mass_p·idx'_p / Σ mass·idx'. kappa is per cell, by status. Config: modelConfig.shareRule {assumedIndexScale: 2, status ASSUMPTION}.
+
+Input contract: [{activity, minutes, exercise?, intensity?}] (spec §14). Engine errors must name the file and row, or the input row.
+
+Output schema per part (v0.7): {median, lo5.5, hi94.5, band, color, flags[], pRed, saturated, typicalityPercentile}. flags[] ∈ smallBaseline, straddlesCutoff, highUncertainty, referenceIsAverage. pRed = P(M ≥ 1.8) (diagnostic). saturated (bool) = median ≥ Mcap (2.5), and the UI shows ">2.5×" (Body P2, adopted). phi stays 0.25 (P1 adopted; P3 phi 0.5 rejected).
+
+Tests:
+- tests/test_validation_v07.R uses SYNTHETIC fixtures in tests/fixtures. These fixtures are never shipped.
+- §10 calibration tests are unchanged.
+- New sanity test: in demo_output_v7, hip thrust glutes ≥ legs, bench chest ≥ arms, curls arms ≥ legs, squat legs ≥ arms, swimming shoulders ≥ hips.
+
+### Changelog
+- 2026-10-24: Mathematician bumped this file to v0.7 for model.R v0.7.
+- 2026-10-24: Methods Writer sweep. Lift default intensities stated. Status counts: activation_shares_v2.1 ASSUMPTION 183/200, lift_shares 105/112, combined 288/312.
+- 2026-10-24: v0.7 LOCKED (with SE review: status enum, lift share column, met_id, yard_work 25th, GOLDEN_TOL in spec). The saturated flag was added to the output schema; P1 and P2 were adopted and P3 rejected.

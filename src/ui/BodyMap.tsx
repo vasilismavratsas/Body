@@ -1,7 +1,9 @@
+import type { KeyboardEvent, MouseEvent } from 'react';
 import type { PartResult } from '../core/model';
 import type { PartId } from '../data/schemas';
 import { PART_IDS } from '../data/schemas';
 import bodyPolygons from './bodyPolygons.json';
+import { displayInterval, displayMultiple, partLabel } from './displayLabels';
 
 type Props = {
   parts: PartResult[];
@@ -29,6 +31,11 @@ function View({
   onSelect: (part: PartId) => void;
   mostlyAssumption: Record<PartId, boolean>;
 }) {
+  /** One select handler for click, tap, Enter/Space (round-2 §A.1). */
+  function selectPart(id: PartId) {
+    onSelect(id);
+  }
+
   return (
     <figure className="body-view">
       <figcaption>{name}</figcaption>
@@ -53,11 +60,19 @@ function View({
               y2="4"
               stroke="rgba(0,0,0,0.35)"
               strokeWidth="1.5"
+              className="decorative"
             />
           </pattern>
         </defs>
-        {/* subtle silhouette backdrop */}
-        <ellipse cx="50" cy="12" rx="10" ry="12" className="body-silhouette" />
+        {/* decorative silhouette — pointer-events: none */}
+        <ellipse
+          cx="50"
+          cy="12"
+          rx="10"
+          ry="12"
+          className="body-silhouette decorative"
+          pointerEvents="none"
+        />
         {PART_IDS.map((id) => {
           const polys = polygons[id] ?? [];
           if (polys.length === 0) return null;
@@ -66,23 +81,26 @@ function View({
           const uncertain = Boolean(r?.highUncertainty) || mostlyAssumption[id];
           const hatch = r?.straddlesCutoff === true;
           const isSelected = selected === id;
-          const label = `${id.replace('_', ' ')}, ${r?.band ?? 'green'}, about ${String(r?.median ?? 1)}×`;
+          const label = `${partLabel(id)}, ${r?.band ?? 'green'}, about ${displayMultiple(r?.median ?? 1, r?.lo89 ?? 1, r?.hi89 ?? 1, r?.saturated ?? false)}`;
           return (
             <g
               key={id}
               id={`${name}-${id}`}
+              data-testid={`region-${name}-${id}`}
               role="button"
               tabIndex={0}
               aria-label={label}
               aria-pressed={isSelected}
               className={`body-part${isSelected ? ' is-selected' : ''}${uncertain ? ' is-uncertain' : ''}`}
-              onClick={() => {
-                onSelect(id);
+              style={{ pointerEvents: 'auto', cursor: 'pointer' }}
+              onClick={(e: MouseEvent) => {
+                e.stopPropagation();
+                selectPart(id);
               }}
-              onKeyDown={(e) => {
+              onKeyDown={(e: KeyboardEvent) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
-                  onSelect(id);
+                  selectPart(id);
                 }
               }}
             >
@@ -95,14 +113,17 @@ function View({
                   strokeWidth={isSelected ? 1.4 : 0.6}
                   strokeDasharray={uncertain ? '2 1.5' : undefined}
                   className={uncertain ? 'desaturated' : undefined}
+                  style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                 />
               ))}
+              {/* hatching overlay — decorative, no pointer events (round-2 §A.1) */}
               {hatch
                 ? polys.map((pts, i) => (
                     <polygon
                       key={`h-${id}-${String(i)}`}
                       points={pts}
                       fill={`url(#hatch-${name})`}
+                      className="decorative"
                       pointerEvents="none"
                     />
                   ))
@@ -143,7 +164,7 @@ export function BodyMap(props: Props) {
         />
       </div>
       <Legend />
-      <table className="sr-table">
+      <table className="parts-table">
         <caption>Text equivalent of the body map</caption>
         <thead>
           <tr>
@@ -151,17 +172,17 @@ export function BodyMap(props: Props) {
             <th scope="col">Multiple</th>
             <th scope="col">Likely range</th>
             <th scope="col">Band</th>
+            <th scope="col">Chance of red</th>
           </tr>
         </thead>
         <tbody>
           {parts.map((p) => (
             <tr key={p.part}>
-              <td>{p.part}</td>
-              <td>{p.median}×</td>
-              <td>
-                {p.lo89}–{p.hi89}×
-              </td>
+              <td>{partLabel(p.part)}</td>
+              <td>{displayMultiple(p.median, p.lo89, p.hi89, p.saturated)}</td>
+              <td>{displayInterval(p.lo89, p.hi89, p.saturated)}</td>
               <td>{p.band}</td>
+              <td>{Math.round(p.pRed * 100)}%</td>
             </tr>
           ))}
         </tbody>
@@ -171,19 +192,24 @@ export function BodyMap(props: Props) {
 }
 
 function Legend() {
+  // Swatches ≥ 24×24 px, 1 px contrasting border, text label (round-2 §A.3)
   return (
     <ul className="legend" aria-label="Map legend">
       <li>
         <span className="swatch ramp" aria-hidden />
-        Color ramp on log₂(multiple), full red at 2.5× (bands 1.15 / 1.4 / 1.8)
+        <span>
+          Color ramp on log₂(multiple), full red at 2.5× (bands 1.15 / 1.4 / 1.8)
+        </span>
       </li>
       <li>
         <span className="swatch hatch" aria-hidden />
-        Soft hatching: 89% range crosses two or more band edges
+        <span>Soft hatching: 89% range crosses two or more band edges</span>
       </li>
       <li>
         <span className="swatch dotted" aria-hidden />
-        Desaturated + dotted outline: high uncertainty or mostly ASSUMPTION shares
+        <span>
+          Desaturated + dotted outline: high uncertainty or mostly ASSUMPTION shares
+        </span>
       </li>
     </ul>
   );

@@ -1,11 +1,11 @@
 {
   "name": "body",
   "private": true,
-  "version": "0.6.1",
+  "version": "0.7.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run ref:verify && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -13,7 +13,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -b --pretty false",
-    "data:convert": "node scripts/convert-reference-data.mjs"
+    "ref:verify": "node scripts/verify-reference.mjs",
+    "data:convert": "node scripts/convert-reference-data.mjs",
+    "pretest": "npm run ref:verify"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -24,6 +26,7 @@
     "@eslint/js": "^9.36.0",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
