@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "vitest run",
+    "test": "vitest run --pool=forks --no-file-parallelism",
     "test:watch": "vitest",
     "typecheck": "tsc -b --pretty false",
     "ref:verify": "node scripts/verify-reference.mjs",
