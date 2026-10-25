@@ -50,6 +50,9 @@ export function MethodsPage() {
             https://doi.org/10.18128/D060.V3.3
           </a>
           . Only derived aggregates are used; raw IPUMS microdata are not redistributed.
+          IPUMS ATUS data are derived from the American Time Use Survey, conducted by the
+          U.S. Census Bureau for the U.S. Bureau of Labor Statistics. Use of these data
+          does not imply endorsement by IPUMS, BLS, or the Census Bureau.
         </li>
         <li>
           Herrmann SD et al., 2024, “2024 Adult Compendium of Physical Activities”,{' '}

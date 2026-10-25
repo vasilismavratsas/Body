@@ -15,8 +15,9 @@
     "test:golden": "node scripts/run-golden-criterion.mjs",
     "typecheck": "tsc -b --pretty false",
     "ref:verify": "node scripts/verify-reference.mjs",
+    "data:guard-microdata": "node scripts/guard-no-microdata.mjs",
     "data:convert": "node scripts/convert-reference-data.mjs",
-    "pretest": "npm run ref:verify"
+    "pretest": "npm run ref:verify && npm run data:guard-microdata"
   },
   "dependencies": {
     "react": "^19.1.1",
