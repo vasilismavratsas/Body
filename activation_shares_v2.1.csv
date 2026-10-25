@@ -1,0 +1,201 @@
+activity_id,part,share,index_pctMVC,mass_fraction,status,confidence,method,source
+walking,arms,0.0339,3,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",Collins 2009 minimal shoulder torque
+walking,shoulders,0.0145,3,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",Collins 2009
+walking,chest,0.0081,2,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+walking,upper_back,0.0226,4,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+walking,core,0.0161,5,0.0423,stand-in,low,"share_1 (mass x index, normalized)",White & McNair 2002 Clin Biomech (abdominals <5% MVC walking) Clin Biomech 17:177-184 (copy: https://studyres.com/doc/4295915/abdominal-and-erector-spinae-muscle-activity-during)
+walking,lower_back,0.0323,10,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",ES bursts near foot strike per White&McNair; magnitude assumed
+walking,hips_glutes,0.2181,19.8,0.1443,stand-in,low,"share_1 (mass x index, normalized)",APNM thigh/hip value reused
+walking,legs,0.6544,19.8,0.4329,cited,medium,"share_1 (mass x index, normalized)",APNM 2025 https://doi.org/10.1139/apnm-2025-0097 walking thigh/hip mean %MVC
+running,arms,0.0439,8,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",Arellano&Kram 2014 arm swing active
+running,shoulders,0.0235,10,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+running,chest,0.0078,4,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+running,upper_back,0.0219,8,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+running,core,0.0157,10,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+running,lower_back,0.0313,20,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+running,hips_glutes,0.214,40,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+running,legs,0.6419,40,0.4329,ASSUMPTION,low,"share_1 (mass x index, normalized)",~2x walking
+weightlifting,arms,0.148,40,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+weightlifting,shoulders,0.0634,40,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+weightlifting,chest,0.0528,40,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+weightlifting,upper_back,0.074,40,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+weightlifting,core,0.0423,40,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+weightlifting,lower_back,0.0423,40,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+weightlifting,hips_glutes,0.1443,40,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+weightlifting,legs,0.4329,40,0.4329,ASSUMPTION,low,"share_1 (mass x index, normalized)",general whole-body program assumed equal intensity
+gardening,arms,0.2709,30,0.148,stand-in,low,"share_1 (mass x index, normalized)",Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)
+gardening,shoulders,0.0967,25,0.0634,stand-in,low,"share_1 (mass x index, normalized)",Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)
+gardening,chest,0.0258,8,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+gardening,upper_back,0.0677,15,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+gardening,core,0.0258,10,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+gardening,lower_back,0.0644,25,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",stooped work
+gardening,hips_glutes,0.132,15,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+gardening,legs,0.3168,12,0.4329,stand-in,low,"share_1 (mass x index, normalized)",Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted) lower limb lower than upper
+bicycling,arms,0.0322,4,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",handlebar support
+bicycling,shoulders,0.0138,4,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+bicycling,chest,0.0057,2,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+bicycling,upper_back,0.0161,4,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+bicycling,core,0.0115,5,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+bicycling,lower_back,0.0184,8,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+bicycling,hips_glutes,0.1961,25,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+bicycling,legs,0.7061,30,0.4329,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+yard_work,arms,0.2709,30,0.148,stand-in,low,"share_1 (mass x index, normalized)",Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)
+yard_work,shoulders,0.0967,25,0.0634,stand-in,low,"share_1 (mass x index, normalized)",Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)
+yard_work,chest,0.0258,8,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+yard_work,upper_back,0.0677,15,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+yard_work,core,0.0258,10,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+yard_work,lower_back,0.0644,25,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",stooped work
+yard_work,hips_glutes,0.132,15,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+yard_work,legs,0.3168,12,0.4329,stand-in,low,"share_1 (mass x index, normalized)",Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted) lower limb lower than upper
+household,arms,0.2141,15,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+household,shoulders,0.0734,12,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+household,chest,0.0255,5,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+household,upper_back,0.0571,8,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+household,core,0.0245,6,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+household,lower_back,0.0489,12,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+household,hips_glutes,0.1391,10,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+household,legs,0.4174,10,0.4329,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+calisthenics,arms,0.1865,40,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",push-up/dip
+calisthenics,shoulders,0.07,35,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+calisthenics,chest,0.0666,40,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+calisthenics,upper_back,0.0582,25,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+calisthenics,core,0.0466,35,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",plank/sit-up
+calisthenics,lower_back,0.0266,20,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+calisthenics,hips_glutes,0.1364,30,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",squat/lunge
+calisthenics,legs,0.4091,30,0.4329,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+yoga,arms,0.127,30,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",not measured; plank/chaturanga assumed ~core-legs level
+yoga,shoulders,0.0544,30,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",not measured
+yoga,chest,0.0378,25,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",not measured
+yoga,upper_back,0.0839,39.65,0.074,cited,low,"share_1 (mass x index, normalized); index derived as mean of two cited muscles","Mullerpatan 2020 Int J Yoga PMC7336940 mean of lower trapezius 41.9, latissimus 37.4"
+yoga,core,0.0276,22.8,0.0423,cited,medium,"share_1 (mass x index, normalized)",Mullerpatan 2020 Int J Yoga PMC7336940 rectus abdominis
+yoga,lower_back,0.0782,64.7,0.0423,cited,medium,"share_1 (mass x index, normalized)",Mullerpatan 2020 Int J Yoga PMC7336940 erector spinae max pose
+yoga,hips_glutes,0.1589,38.5,0.1443,cited,medium,"share_1 (mass x index, normalized)",Mullerpatan 2020 Int J Yoga PMC7336940 gluteus maximus
+yoga,legs,0.4321,34.9,0.4329,cited,medium,"share_1 (mass x index, normalized)",Mullerpatan 2020 Int J Yoga PMC7336940 vastus lateralis
+indoor_biking,arms,0.0322,4,0.148,ASSUMPTION,low,"share_1 (mass x index, normalized)",handlebar support
+indoor_biking,shoulders,0.0138,4,0.0634,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+indoor_biking,chest,0.0057,2,0.0528,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+indoor_biking,upper_back,0.0161,4,0.074,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+indoor_biking,core,0.0115,5,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+indoor_biking,lower_back,0.0184,8,0.0423,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+indoor_biking,hips_glutes,0.1961,25,0.1443,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+indoor_biking,legs,0.7061,30,0.4329,ASSUMPTION,low,"share_1 (mass x index, normalized)",
+swimming,arms,0.3231,52.84,0.148,stand-in,low,"share_1 (mass x assumed index, normalized); r2_3; r2_8 cited index","Conceicao A et al. 2010 Open Sports Sci J 3:67 https://doi.org/10.2174/1875399x01003010067 Table 2 (1st 50 m, n=1 case study): triceps 52.84; single subject"
+swimming,shoulders,0.0737,28.14,0.0634,cited,medium,"share_1 (mass x assumed index, normalized); r2_3; r2_8 cited index","Martens J et al. 2015 PLoS One 10:e0144998 https://doi.org/10.1371/journal.pone.0144998 Table 2 (MVIC, event-synchronized, n=15 swimmers, front crawl): deltoideus medialis 28.14"
+swimming,chest,0.0327,15,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+swimming,upper_back,0.0917,30,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+swimming,core,0.014,8.03,0.0423,cited,medium,"share_1 (mass x assumed index, normalized); r2_3; r2_8 cited index","Martens J et al. 2015 PLoS One 10:e0144998 https://doi.org/10.1371/journal.pone.0144998 Table 2 (MVIC, event-synchronized, n=15 swimmers, front crawl): rectus abdominis 8.03"
+swimming,lower_back,0.0175,10,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+swimming,hips_glutes,0.0894,15,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+swimming,legs,0.3577,20,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,arms,0.1585,30,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,shoulders,0.0679,30,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,chest,0.0189,10,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,upper_back,0.0396,15,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,core,0.0227,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,lower_back,0.0227,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,hips_glutes,0.1288,25,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+tennis,legs,0.541,35,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,arms,0.0803,15,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,shoulders,0.0344,15,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,chest,0.0095,5,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,upper_back,0.0214,8,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,core,0.0229,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,lower_back,0.0229,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,hips_glutes,0.1826,35,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+basketball,legs,0.626,40,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,arms,0.0161,3,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,shoulders,0.0069,3,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,chest,0.0038,2,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,upper_back,0.0107,4,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,core,0.023,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,lower_back,0.023,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,hips_glutes,0.2095,40,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+soccer,legs,0.7069,45,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,arms,0.0731,10,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,shoulders,0.0313,10,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,chest,0.013,5,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,upper_back,0.0292,8,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,core,0.0167,8,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,lower_back,0.0167,8,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,hips_glutes,0.1782,25,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+elliptical,legs,0.6416,30,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,arms,0.1431,30,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,shoulders,0.0409,20,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,chest,0.0085,5,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,upper_back,0.0954,40,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,core,0.0204,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,lower_back,0.0409,30,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,hips_glutes,0.1627,35,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rowing_machine,legs,0.4882,35,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,arms,0.0271,3,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,shoulders,0.0116,3,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,chest,0.0064,2,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,upper_back,0.0226,5,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,core,0.0207,8,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,lower_back,0.031,12,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,hips_glutes,0.2202,25,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+hiking,legs,0.6605,25,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,arms,0.1557,15,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,shoulders,0.0667,15,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,chest,0.0296,8,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,upper_back,0.0519,10,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,core,0.0445,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,lower_back,0.0445,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,hips_glutes,0.1518,15,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+golf,legs,0.4554,15,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,arms,0.2327,8,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,shoulders,0.0748,6,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,chest,0.0208,2,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,upper_back,0.0582,4,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,core,0.0249,3,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,lower_back,0.0499,6,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,hips_glutes,0.1134,4,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+fishing,legs,0.4254,5,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,arms,0.0626,10,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,shoulders,0.0322,12,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,chest,0.0112,5,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,upper_back,0.025,8,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,core,0.0268,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,lower_back,0.0179,10,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,hips_glutes,0.1832,30,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+aerobics,legs,0.6411,35,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,arms,0.0382,5,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,shoulders,0.0262,8,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,chest,0.0082,3,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,upper_back,0.0229,6,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,core,0.0262,12,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,lower_back,0.0218,10,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,hips_glutes,0.1862,25,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+dancing,legs,0.6703,30,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,arms,0.0243,5,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,shoulders,0.0104,5,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,chest,0.0052,3,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,upper_back,0.0121,5,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,core,0.0278,20,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,lower_back,0.0208,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,hips_glutes,0.1894,40,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+downhill_skiing,legs,0.7101,50,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,arms,0.2062,20,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,shoulders,0.0662,15,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,chest,0.0184,5,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,upper_back,0.0412,8,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,core,0.0295,10,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,lower_back,0.0354,12,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,hips_glutes,0.1508,15,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+bowling,legs,0.4523,15,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,arms,0.1272,25,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,shoulders,0.0545,25,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,chest,0.0272,15,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,upper_back,0.0382,15,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,core,0.0364,25,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,lower_back,0.0218,15,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,hips_glutes,0.1737,35,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+martial_arts,legs,0.521,35,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,arms,0.2763,50,0.148,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,shoulders,0.0947,40,0.0634,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,chest,0.0296,15,0.0528,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,upper_back,0.1243,45,0.074,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,core,0.0395,25,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,lower_back,0.0316,20,0.0423,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,hips_glutes,0.0808,15,0.1443,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved
+rock_climbing,legs,0.3233,20,0.4329,ASSUMPTION,low,"share_1 (mass x assumed index, normalized); r2_3",assumed index from task biomechanics; no multi-muscle %MVC retrieved

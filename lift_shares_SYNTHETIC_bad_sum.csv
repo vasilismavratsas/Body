@@ -1,0 +1,9 @@
+exercise_id,parent,part,index_pctMVC,mass_fraction,status,source,share
+synthetic_curl,weightlifting,arms,50,0.148,ASSUMPTION,SYNTHETIC,0.9
+synthetic_curl,weightlifting,shoulders,2,0.0634,ASSUMPTION,SYNTHETIC,0.1
+synthetic_curl,weightlifting,chest,2,0.0528,ASSUMPTION,SYNTHETIC,0.1
+synthetic_curl,weightlifting,upper_back,2,0.074,ASSUMPTION,SYNTHETIC,0
+synthetic_curl,weightlifting,core,2,0.0423,ASSUMPTION,SYNTHETIC,0
+synthetic_curl,weightlifting,lower_back,2,0.0423,ASSUMPTION,SYNTHETIC,0
+synthetic_curl,weightlifting,hips_glutes,2,0.1443,ASSUMPTION,SYNTHETIC,0
+synthetic_curl,weightlifting,legs,2,0.4329,ASSUMPTION,SYNTHETIC,0

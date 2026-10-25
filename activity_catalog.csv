@@ -1,0 +1,26 @@
+activity_id,share_row,met_file,met_id,mapping_status,note,group,search_terms
+walk_brisk,walking,mets.csv,walk_brisk,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Cardio,walking;walk;brisk walk;power walking
+jog,running,mets.csv,jog,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Cardio,running;run;jogging;jog
+resist_multi,weightlifting,mets.csv,resist_multi,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Strength,weightlifting;weights;lifting;gym;resistance training
+bike_leisure,bicycling,mets.csv,bike_leisure,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Cardio,cycling;biking;bike;bicycle
+indoor_bike_general,indoor_biking,mets.csv,indoor_bike_general,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Cardio,indoor cycling;stationary bike;spin;spinning;Peloton
+calisthenics_mod,calisthenics,mets.csv,calisthenics_mod,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Strength,calisthenics;bodyweight;push-ups;sit-ups;jumping jacks
+yoga_hatha,yoga,mets.csv,yoga_hatha,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Strength,yoga;hatha;stretching;vinyasa
+garden,gardening,mets.csv,garden,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Outdoor,gardening;garden;planting;weeding
+chore_clean_light,household,mets.csv,chore_clean_light,ASSUMPTION,pairing moved verbatim from model_v6.R A3 (not new data),Daily life,housework;cleaning;chores;vacuuming;household
+swimming,swimming,activities25_mets.csv,swimming,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Cardio,swimming;swim;laps;pool
+tennis,tennis,activities25_mets.csv,tennis,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Sports,tennis;racquet;racket sports
+basketball,basketball,activities25_mets.csv,basketball,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Sports,basketball;hoops;shooting baskets
+soccer,soccer,activities25_mets.csv,soccer,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Sports,soccer;football (soccer);futbol
+elliptical,elliptical,activities25_mets.csv,elliptical,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Cardio,elliptical;cross trainer;cardio machine
+rowing_machine,rowing_machine,activities25_mets.csv,rowing_machine,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Cardio,rowing machine;rower;erg;indoor rowing
+hiking,hiking,activities25_mets.csv,hiking,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Outdoor,hiking;hike;trail walking;trekking
+golf,golf,activities25_mets.csv,golf,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Sports,golf;golfing;driving range
+fishing,fishing,activities25_mets.csv,fishing,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Outdoor,fishing;angling;fly fishing
+aerobics,aerobics,activities25_mets.csv,aerobics,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Cardio,aerobics;aerobic class;step aerobics;Zumba
+dancing,dancing,activities25_mets.csv,dancing,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Cardio,dancing;dance;dance class
+downhill_skiing,downhill_skiing,activities25_mets.csv,downhill_skiing,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Outdoor,skiing;downhill skiing;snowboarding;ski
+bowling,bowling,activities25_mets.csv,bowling,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Sports,bowling;tenpin
+martial_arts,martial_arts,activities25_mets.csv,martial_arts,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Sports,martial arts;karate;taekwondo;judo;jiu-jitsu;kickboxing
+rock_climbing,rock_climbing,activities25_mets.csv,rock_climbing,ASSUMPTION,Researcher round 2; MET = default_code; range -> 89% lognormal interval (ASSUMPTION),Outdoor,climbing;rock climbing;bouldering;climbing gym
+yard_work,yard_work,mets.csv,yard,ASSUMPTION,"25th activity. MET: Compendium 2024 08261 Yardwork, general, moderate, 4.0 (Herrmann SD et al. 2024, https://doi.org/10.1016/j.jshs.2023.10.010). Participation: BRFSS 2019 rank 6 (2.8%). Share row activation_shares_v2.1 yard_work copies gardening (stand-in).",Outdoor,yard work;yardwork;raking;mowing;lawn care

@@ -1,0 +1,21 @@
+activity_id,share_row,mapping_status,note
+sleep,lying,ASSUMPTION,moved verbatim from model_v6.R A2
+tv,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+eating,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+work,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+education,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+hh_management,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+org_civic_religious,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+socializing,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+phone_mail,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+other_leisure_residual,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+other_nec,sitting,ASSUMPTION,moved verbatim from model_v6.R A2
+sports_exercise,sitting,ASSUMPTION,"moved verbatim from model_v6.R A2 (researcher reassigned to 07021)"
+personal_care_nonsleep,standing,ASSUMPTION,moved verbatim from model_v6.R A2
+housework,household,ASSUMPTION,moved verbatim from model_v6.R A2
+food_prep,household,ASSUMPTION,moved verbatim from model_v6.R A2
+hh_other_residual,household,ASSUMPTION,moved verbatim from model_v6.R A2
+care_household,household,ASSUMPTION,moved verbatim from model_v6.R A2
+care_nonhousehold,household,ASSUMPTION,moved verbatim from model_v6.R A2
+lawn_garden,gardening,ASSUMPTION,moved verbatim from model_v6.R A2
+purchasing,walking,ASSUMPTION,moved verbatim from model_v6.R A2

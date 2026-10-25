@@ -1,0 +1,533 @@
+Body model v0.7 — 2026-10-24 22:23:02 
+Raw ATUS minutes 1440.0 rescaled to 1440.0
+Deterministic baseline net = 9.200 MET-h/day (researcher TOTAL_net 9.20)
+Inputs: activation_shares_v2.1 + postural_shares_v1.1 + lift_shares/lift_mets (from lifts_v1.1), activity_catalog, baseline_row_map,
+  mets.csv + activities25_mets.csv, muscle_mass_8part_v1 (average), nonexerciser_baseline_v2 + atus_nonexercisers_v2 (IPUMS 18+)
+Share rule (ASSUMPTION): share = mass x activation, assumed indices x2 onto %MVIC, every row
+Activities: 25 catalog + 14 lifts x 3 intensities; lowN (<10 ATUS respondents) flagged: basketball, soccer, bowling, martial_arts, rock_climbing
+Activity METs (code, median, sdlog):
+         activity_id             row  code  MET  sdlog
+          walk_brisk         walking 17200  4.8 0.1980
+                 jog         running 12020  7.5 0.1980
+        resist_multi   weightlifting 02054  3.5 0.1980
+        bike_leisure       bicycling 01010  4.0 0.1980
+ indoor_bike_general   indoor_biking 01200  6.8 0.1980
+    calisthenics_mod    calisthenics 02022  3.8 0.1980
+          yoga_hatha            yoga 02150  2.3 0.1980
+              garden       gardening 08245  3.8 0.1980
+   chore_clean_light       household 05040  2.5 0.1980
+            swimming        swimming 18310  6.0 0.2233
+              tennis          tennis 15675  6.8 0.1800
+          basketball      basketball 15055  7.5 0.1941
+              soccer          soccer 15610  7.0 0.3124
+          elliptical      elliptical 02048  5.0 0.1839
+      rowing_machine  rowing_machine 02071  5.0 0.3221
+              hiking          hiking 17082  5.3 0.2250
+                golf            golf 15255  4.5 0.0786
+             fishing         fishing 04001  3.5 0.3767
+            aerobics        aerobics 02000  7.3 0.1598
+             dancing         dancing 03025  4.5 0.3703
+     downhill_skiing downhill_skiing 19160  6.3 0.1942
+             bowling         bowling 15092  3.8 0.0740
+        martial_arts    martial_arts 15430 10.3 0.2079
+       rock_climbing   rock_climbing 15537  5.8 0.1769
+           yard_work       yard_work 08261  4.0 0.1980
+ASSUMPTIONS: kappa cited/stand-in/ASSUMPTION = 50/20/5; MET CV 0.20 (sdlog 0.198) unless range given (range = 89% interval); deff 1.5; phi 0.25; M_cap 2.5; N 4000
+
+Columns: median and 89% interval of M; band of the median; straddlesCutoff = interval spans >= 2 band edges;
+highUncertainty = log2(hi/lo) > 2; offset_gt_B = share of draws F_p > B_p; pRed = P(M >= 1.8); saturated = median >= 2.5 (UI '>2.5x'); typ_pct = typicality percentile.
+
+Calibration (individual days, gross MET-h/day): SD 4.16 (cited 4.40); p10 27.91 (28.22); p50 32.34 (32.60); p90 38.16 (38.80)
+Spec §10 test 1 (SD [3.90,4.40], p10 [27.6,28.4], p90 [37.6,38.8]): PASS
+
+=== Scenario: sedentary   ===
+        part lo89 median hi89  band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms    1      1    1 green #2E7D32           FALSE          0           FALSE       0.096    0     FALSE      67
+   shoulders    1      1    1 green #2E7D32           FALSE          0           FALSE       0.310    0     FALSE      67
+       chest    1      1    1 green #2E7D32           FALSE          0           FALSE       0.750    0     FALSE      63
+  upper_back    1      1    1 green #2E7D32           FALSE          0           FALSE       0.438    0     FALSE      62
+        core    1      1    1 green #2E7D32           FALSE          0           FALSE       0.581    0     FALSE      60
+  lower_back    1      1    1 green #2E7D32           FALSE          0           FALSE       0.000    0     FALSE      61
+ hips_glutes    1      1    1 green #2E7D32           FALSE          0           FALSE       0.034    0     FALSE      61
+        legs    1      1    1 green #2E7D32           FALSE          0           FALSE       0.000    0     FALSE      58
+
+=== Scenario: walk30 walk_brisk 30 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.07        green #2F7D31           FALSE       0.09           FALSE       0.104 0.00     FALSE      68
+   shoulders 1.00   1.00 1.09        green #2E7D31           FALSE       0.12           FALSE       0.312 0.00     FALSE      66
+       chest 1.00   1.00 1.10        green #2E7D31           FALSE       0.14           FALSE       0.752 0.00     FALSE      65
+  upper_back 1.00   1.00 1.14        green #2F7D31           FALSE       0.19           FALSE       0.427 0.00     FALSE      63
+        core 1.00   1.02 1.36        green #367F31           FALSE       0.45           FALSE       0.597 0.01     FALSE      66
+  lower_back 1.00   1.00 1.06        green #2F7D31           FALSE       0.08           FALSE       0.000 0.00     FALSE      61
+ hips_glutes 1.05   1.16 1.41 yellow-green #6F9230            TRUE       0.43           FALSE       0.036 0.00     FALSE      71
+        legs 1.15   1.26 1.44 yellow-green #969E2F           FALSE       0.33           FALSE       0.000 0.00     FALSE      78
+
+=== Scenario: jog45 jog 45 min  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.02 1.88  green #388031            TRUE       0.91           FALSE       0.104 0.06     FALSE      71
+   shoulders 1.00   1.00 2.45  green #2F7D31            TRUE       1.29           FALSE       0.304 0.09     FALSE      70
+       chest 1.00   1.00 1.77  green #2E7D31            TRUE       0.82           FALSE       0.755 0.05     FALSE      68
+  upper_back 1.00   1.00 2.54  green #2F7D31            TRUE       1.35           FALSE       0.454 0.10     FALSE      70
+        core 1.00   1.00 3.41  green #2E7D31            TRUE       1.77           FALSE       0.594 0.11     FALSE      69
+  lower_back 1.00   1.01 1.72  green #307D31            TRUE       0.78           FALSE       0.000 0.05     FALSE      64
+ hips_glutes 1.06   1.64 3.58 orange #F7B42C            TRUE       1.76           FALSE       0.037 0.42     FALSE      87
+        legs 1.22   1.50 1.94 orange #E2B72D            TRUE       0.68           FALSE       0.000 0.12     FALSE      88
+
+=== Scenario: resist_multi45 resist_multi 45 min  ===
+        part lo89 median hi89  band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.01   1.14 1.83 green #6A9030            TRUE       0.86           FALSE       0.097 0.06     FALSE      74
+   shoulders 1.00   1.08 2.45 green #4E8731            TRUE       1.29           FALSE       0.310 0.12     FALSE      74
+       chest 1.00   1.10 3.51 green #578A30            TRUE       1.81           FALSE       0.764 0.20     FALSE      79
+  upper_back 1.00   1.12 2.65 green #608D30            TRUE       1.40           FALSE       0.461 0.15     FALSE      75
+        core 1.00   1.05 3.26 green #438431            TRUE       1.71           FALSE       0.595 0.16     FALSE      74
+  lower_back 1.00   1.01 1.34 green #317E31           FALSE       0.42           FALSE       0.000 0.01     FALSE      62
+ hips_glutes 1.01   1.14 1.79 green #688F30            TRUE       0.83           FALSE       0.036 0.05     FALSE      73
+        legs 1.03   1.12 1.29 green #618D30           FALSE       0.33           FALSE       0.000 0.00     FALSE      68
+
+=== Scenario: bike_leisure45 bike_leisure 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.34        green #2F7D31           FALSE       0.42           FALSE       0.097 0.01     FALSE      69
+   shoulders 1.00   1.00 1.43        green #2E7D31            TRUE       0.51           FALSE       0.305 0.03     FALSE      67
+       chest 1.00   1.00 1.22        green #2E7D31           FALSE       0.29           FALSE       0.762 0.03     FALSE      66
+  upper_back 1.00   1.00 1.49        green #2E7D31            TRUE       0.57           FALSE       0.447 0.03     FALSE      65
+        core 1.00   1.00 1.79        green #2E7D31            TRUE       0.84           FALSE       0.594 0.05     FALSE      64
+  lower_back 1.00   1.00 1.17        green #2E7D31           FALSE       0.23           FALSE       0.000 0.00     FALSE      62
+ hips_glutes 1.02   1.26 2.12 yellow-green #969F2F            TRUE       1.06           FALSE       0.032 0.13     FALSE      78
+        legs 1.11   1.25 1.48 yellow-green #939E2F            TRUE       0.42           FALSE       0.000 0.00     FALSE      76
+
+=== Scenario: indoor_bike_general45 indoor_bike_general 45 min  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.01 1.62  green #307D31            TRUE       0.70           FALSE       0.096 0.04     FALSE      70
+   shoulders 1.00   1.00 1.86  green #2E7D31            TRUE       0.90           FALSE       0.303 0.06     FALSE      68
+       chest 1.00   1.00 1.44  green #2E7D31            TRUE       0.53           FALSE       0.749 0.04     FALSE      65
+  upper_back 1.00   1.00 1.97  green #2E7D31            TRUE       0.98           FALSE       0.449 0.06     FALSE      68
+        core 1.00   1.00 2.19  green #2E7D31            TRUE       1.13           FALSE       0.582 0.07     FALSE      66
+  lower_back 1.00   1.00 1.32  green #2E7D31           FALSE       0.41           FALSE       0.000 0.02     FALSE      64
+ hips_glutes 1.04   1.50 3.24 orange #E2B72D            TRUE       1.64           FALSE       0.031 0.33     FALSE      85
+        legs 1.22   1.49 1.89 orange #E1B72D            TRUE       0.63           FALSE       0.000 0.10     FALSE      88
+
+=== Scenario: calisthenics_mod45 calisthenics_mod 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.02   1.22 2.05 yellow-green #889A2F            TRUE       1.01           FALSE       0.106 0.11     FALSE      77
+   shoulders 1.00   1.11 2.69        green #5C8C30            TRUE       1.43           FALSE       0.310 0.15     FALSE      75
+       chest 1.00   1.21 4.48 yellow-green #84992F            TRUE       2.16            TRUE       0.759 0.28     FALSE      83
+  upper_back 1.00   1.07 2.49        green #4C8631            TRUE       1.32           FALSE       0.443 0.12     FALSE      72
+        core 1.00   1.07 3.69        green #4B8631            TRUE       1.88           FALSE       0.594 0.18     FALSE      75
+  lower_back 1.00   1.00 1.28        green #2E7D31           FALSE       0.36           FALSE       0.000 0.01     FALSE      62
+ hips_glutes 1.00   1.14 1.83        green #689030            TRUE       0.87           FALSE       0.032 0.06     FALSE      73
+        legs 1.03   1.13 1.32        green #638E30           FALSE       0.35           FALSE       0.000 0.00     FALSE      70
+
+=== Scenario: yoga_hatha45 yoga_hatha 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.02 1.09        green #357F31           FALSE       0.12           FALSE       0.100 0.00     FALSE      68
+   shoulders 1.00   1.01 1.15        green #327E31           FALSE       0.20           FALSE       0.308 0.00     FALSE      67
+       chest 1.00   1.01 1.21        green #327E31           FALSE       0.28           FALSE       0.751 0.00     FALSE      67
+  upper_back 1.04   1.21 1.73 yellow-green #82982F            TRUE       0.73           FALSE       0.443 0.04     FALSE      74
+        core 1.01   1.11 1.60        green #5A8B30            TRUE       0.66           FALSE       0.586 0.03     FALSE      70
+  lower_back 1.02   1.06 1.22        green #498631           FALSE       0.26           FALSE       0.000 0.00     FALSE      64
+ hips_glutes 1.05   1.14 1.36        green #689030           FALSE       0.38           FALSE       0.031 0.00     FALSE      70
+        legs 1.04   1.08 1.16        green #508831           FALSE       0.16           FALSE       0.000 0.00     FALSE      65
+
+=== Scenario: garden45 garden 45 min  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.16   1.51 2.28 orange #E5B92D            TRUE       0.97           FALSE       0.090 0.24     FALSE      81
+   shoulders 1.06   1.45 2.49 orange #D5B32D            TRUE       1.23           FALSE       0.302 0.26     FALSE      80
+       chest 1.00   1.02 1.78  green #357F31            TRUE       0.83           FALSE       0.758 0.05     FALSE      72
+  upper_back 1.00   1.09 1.78  green #558A31            TRUE       0.83           FALSE       0.436 0.05     FALSE      71
+        core 1.00   1.02 1.75  green #347F31            TRUE       0.81           FALSE       0.590 0.05     FALSE      69
+  lower_back 1.00   1.03 1.26  green #3A8031           FALSE       0.33           FALSE       0.000 0.00     FALSE      65
+ hips_glutes 1.01   1.09 1.40  green #548931            TRUE       0.47           FALSE       0.034 0.00     FALSE      69
+        legs 1.05   1.12 1.26  green #618D30           FALSE       0.26           FALSE       0.000 0.00     FALSE      69
+
+=== Scenario: chore_clean_light45 chore_clean_light 45 min  ===
+        part lo89 median hi89  band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.03   1.14 1.32 green #6A9030           FALSE       0.36           FALSE       0.094    0     FALSE      73
+   shoulders 1.00   1.08 1.30 green #4F8731           FALSE       0.38           FALSE       0.292    0     FALSE      69
+       chest 1.00   1.00 1.27 green #2F7D31           FALSE       0.34           FALSE       0.755    0     FALSE      65
+  upper_back 1.00   1.04 1.27 green #408331           FALSE       0.35           FALSE       0.455    0     FALSE      65
+        core 1.00   1.00 1.26 green #2F7D31           FALSE       0.34           FALSE       0.570    0     FALSE      62
+  lower_back 1.00   1.01 1.15 green #317E31           FALSE       0.20           FALSE       0.000    0     FALSE      62
+ hips_glutes 1.00   1.08 1.25 green #508831           FALSE       0.31           FALSE       0.031    0     FALSE      65
+        legs 1.02   1.07 1.15 green #4B8631           FALSE       0.17           FALSE       0.000    0     FALSE      64
+
+=== Scenario: swimming45 swimming 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.36   2.08 4.12          red #DB6429            TRUE       1.60           FALSE       0.108 0.68     FALSE      89
+   shoulders 1.32   2.63 7.06          red #C62828            TRUE       2.42            TRUE       0.305 0.76      TRUE      92
+       chest 1.00   1.04 3.05        green #408231            TRUE       1.61           FALSE       0.745 0.15     FALSE      76
+  upper_back 1.00   1.25 3.11 yellow-green #929D2F            TRUE       1.63           FALSE       0.434 0.22     FALSE      80
+        core 1.00   1.32 4.52 yellow-green #AAA52E            TRUE       2.17            TRUE       0.577 0.30     FALSE      83
+  lower_back 1.00   1.00 1.17        green #2E7D31           FALSE       0.23           FALSE       0.000 0.00     FALSE      62
+ hips_glutes 1.00   1.08 1.65        green #508831            TRUE       0.72           FALSE       0.038 0.03     FALSE      70
+        legs 1.03   1.12 1.30        green #5F8D30           FALSE       0.34           FALSE       0.000 0.00     FALSE      69
+
+=== Scenario: tennis45 tennis 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.02   1.38 2.97 yellow-green #BCAB2E            TRUE       1.55           FALSE       0.097 0.27     FALSE      80
+   shoulders 1.00   1.22 4.32 yellow-green #86992F            TRUE       2.11            TRUE       0.297 0.28     FALSE      80
+       chest 1.00   1.00 3.49        green #2E7D31            TRUE       1.81           FALSE       0.749 0.13     FALSE      72
+  upper_back 1.00   1.05 3.54        green #438431            TRUE       1.82           FALSE       0.440 0.17     FALSE      76
+        core 1.00   1.01 3.88        green #317E31            TRUE       1.96           FALSE       0.570 0.15     FALSE      71
+  lower_back 1.00   1.00 1.44        green #2E7D31            TRUE       0.52           FALSE       0.000 0.02     FALSE      63
+ hips_glutes 1.01   1.27 2.62 yellow-green #99A02F            TRUE       1.38           FALSE       0.036 0.20     FALSE      80
+        legs 1.13   1.37 1.74 yellow-green #B9AA2E            TRUE       0.63           FALSE       0.000 0.04     FALSE      83
+
+=== Scenario: basketball45 basketball 45 min [lowN: ATUS participation n < 10] ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.12 2.39  green #5F8D30            TRUE       1.25           FALSE       0.098 0.13     FALSE      75
+   shoulders 1.00   1.03 3.25  green #3B8131            TRUE       1.70           FALSE       0.305 0.16     FALSE      74
+       chest 1.00   1.00 2.32  green #2E7D31            TRUE       1.21           FALSE       0.760 0.07     FALSE      69
+  upper_back 1.00   1.00 2.37  green #2E7D31            TRUE       1.24           FALSE       0.445 0.09     FALSE      70
+        core 1.00   1.01 4.55  green #317E31            TRUE       2.19            TRUE       0.589 0.17     FALSE      73
+  lower_back 1.00   1.00 1.54  green #2E7D31            TRUE       0.62           FALSE       0.000 0.03     FALSE      64
+ hips_glutes 1.03   1.51 3.35 orange #E5B82D            TRUE       1.69           FALSE       0.032 0.35     FALSE      87
+        legs 1.20   1.49 1.93 orange #E0B72D            TRUE       0.68           FALSE       0.000 0.11     FALSE      88
+
+=== Scenario: soccer45 soccer 45 min [lowN: ATUS participation n < 10] ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.34  green #2E7D31           FALSE       0.43           FALSE       0.093 0.02     FALSE      70
+   shoulders 1.00   1.00 1.22  green #2E7D31           FALSE       0.29           FALSE       0.308 0.03     FALSE      67
+       chest 1.00   1.00 1.13  green #2E7D31           FALSE       0.17           FALSE       0.758 0.03     FALSE      65
+  upper_back 1.00   1.00 1.65  green #2E7D31            TRUE       0.73           FALSE       0.438 0.05     FALSE      64
+        core 1.00   1.01 4.18  green #317E31            TRUE       2.06            TRUE       0.605 0.16     FALSE      72
+  lower_back 1.00   1.00 1.47  green #2E7D31            TRUE       0.55           FALSE       0.000 0.03     FALSE      63
+ hips_glutes 1.05   1.55 3.39 orange #F3BD2D            TRUE       1.69           FALSE       0.037 0.36     FALSE      87
+        legs 1.20   1.51 2.10 orange #E5B92D            TRUE       0.81           FALSE       0.000 0.18     FALSE      88
+
+=== Scenario: elliptical45 elliptical 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.06 1.81        green #498531            TRUE       0.86           FALSE       0.090 0.06     FALSE      73
+   shoulders 1.00   1.01 2.35        green #327E31            TRUE       1.23           FALSE       0.308 0.09     FALSE      72
+       chest 1.00   1.00 2.21        green #2E7D31            TRUE       1.15           FALSE       0.748 0.07     FALSE      69
+  upper_back 1.00   1.01 2.23        green #317E31            TRUE       1.15           FALSE       0.441 0.09     FALSE      70
+        core 1.00   1.00 2.47        green #2E7D31            TRUE       1.30           FALSE       0.587 0.09     FALSE      68
+  lower_back 1.00   1.00 1.23        green #2E7D31           FALSE       0.30           FALSE       0.000 0.01     FALSE      62
+ hips_glutes 1.02   1.30 2.37 yellow-green #A3A32F            TRUE       1.22           FALSE       0.035 0.18     FALSE      81
+        legs 1.13   1.31 1.59 yellow-green #A5A42F            TRUE       0.50           FALSE       0.000 0.01     FALSE      81
+
+=== Scenario: rowing_machine45 rowing_machine 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.01   1.22 2.37 yellow-green #86992F            TRUE       1.23           FALSE       0.099 0.15     FALSE      77
+   shoulders 1.00   1.03 2.73        green #3C8131            TRUE       1.45           FALSE       0.300 0.12     FALSE      73
+       chest 1.00   1.00 1.65        green #2E7D31            TRUE       0.73           FALSE       0.764 0.05     FALSE      68
+  upper_back 1.00   1.29 4.31 yellow-green #A0A22F            TRUE       2.10            TRUE       0.437 0.30     FALSE      82
+        core 1.00   1.00 2.77        green #2E7D31            TRUE       1.47           FALSE       0.585 0.11     FALSE      70
+  lower_back 1.00   1.01 1.53        green #327E31            TRUE       0.62           FALSE       0.000 0.02     FALSE      65
+ hips_glutes 1.01   1.26 2.51 yellow-green #959E2F            TRUE       1.31           FALSE       0.038 0.18     FALSE      80
+        legs 1.06   1.22 1.57 yellow-green #869A2F            TRUE       0.56           FALSE       0.000 0.01     FALSE      76
+
+=== Scenario: hiking45 hiking 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.38        green #2E7D31           FALSE       0.47           FALSE       0.103 0.02     FALSE      70
+   shoulders 1.00   1.00 1.48        green #2E7D31            TRUE       0.57           FALSE       0.307 0.04     FALSE      69
+       chest 1.00   1.00 1.39        green #2E7D31           FALSE       0.47           FALSE       0.755 0.03     FALSE      66
+  upper_back 1.00   1.00 2.15        green #2F7D31            TRUE       1.10           FALSE       0.451 0.07     FALSE      68
+        core 1.00   1.00 3.05        green #2F7D31            TRUE       1.61           FALSE       0.580 0.12     FALSE      69
+  lower_back 1.00   1.00 1.44        green #2F7D31            TRUE       0.53           FALSE       0.000 0.02     FALSE      64
+ hips_glutes 1.04   1.44 2.85       orange #CFB12E            TRUE       1.45           FALSE       0.038 0.28     FALSE      84
+        legs 1.14   1.34 1.68 yellow-green #B0A72E            TRUE       0.56           FALSE       0.000 0.02     FALSE      82
+
+=== Scenario: golf45 golf 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.01   1.22 2.11 yellow-green #86992F            TRUE       1.06           FALSE       0.102 0.11     FALSE      77
+   shoulders 1.00   1.12 3.02        green #618D30            TRUE       1.60           FALSE       0.309 0.18     FALSE      77
+       chest 1.00   1.02 3.40        green #347F31            TRUE       1.77           FALSE       0.751 0.15     FALSE      76
+  upper_back 1.00   1.07 2.74        green #4C8631            TRUE       1.45           FALSE       0.440 0.14     FALSE      74
+        core 1.00   1.09 4.06        green #538931            TRUE       2.02            TRUE       0.598 0.21     FALSE      77
+  lower_back 1.00   1.01 1.50        green #347F31            TRUE       0.59           FALSE       0.000 0.02     FALSE      64
+ hips_glutes 1.01   1.22 2.10 yellow-green #85992F            TRUE       1.06           FALSE       0.039 0.12     FALSE      78
+        legs 1.06   1.18 1.38 yellow-green #799530           FALSE       0.38           FALSE       0.000 0.00     FALSE      73
+
+=== Scenario: fishing45 fishing 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.02   1.26 2.27 yellow-green #959E2F            TRUE       1.15           FALSE       0.098 0.14     FALSE      77
+   shoulders 1.00   1.11 2.80        green #5C8C30            TRUE       1.48           FALSE       0.310 0.16     FALSE      76
+       chest 1.00   1.00 2.05        green #2E7D31            TRUE       1.04           FALSE       0.753 0.07     FALSE      69
+  upper_back 1.00   1.06 2.50        green #468431            TRUE       1.32           FALSE       0.450 0.12     FALSE      73
+        core 1.00   1.00 2.51        green #307D31            TRUE       1.33           FALSE       0.573 0.09     FALSE      69
+  lower_back 1.00   1.01 1.42        green #337E31            TRUE       0.50           FALSE       0.000 0.02     FALSE      63
+ hips_glutes 1.00   1.09 1.72        green #538931            TRUE       0.78           FALSE       0.036 0.05     FALSE      71
+        legs 1.02   1.11 1.36        green #5E8C30           FALSE       0.40           FALSE       0.000 0.00     FALSE      69
+
+=== Scenario: aerobics45 aerobics 45 min  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.07 2.17  green #4D8731            TRUE       1.12           FALSE       0.104 0.10     FALSE      75
+   shoulders 1.00   1.02 3.12  green #378031            TRUE       1.64           FALSE       0.300 0.14     FALSE      74
+       chest 1.00   1.00 2.37  green #2E7D31            TRUE       1.25           FALSE       0.755 0.08     FALSE      69
+  upper_back 1.00   1.01 2.75  green #317D31            TRUE       1.46           FALSE       0.444 0.11     FALSE      71
+        core 1.00   1.02 5.08  green #357F31            TRUE       2.34            TRUE       0.597 0.18     FALSE      74
+  lower_back 1.00   1.00 1.43  green #2E7D31            TRUE       0.52           FALSE       0.000 0.03     FALSE      63
+ hips_glutes 1.03   1.52 3.27 orange #E8B92D            TRUE       1.66           FALSE       0.035 0.35     FALSE      86
+        legs 1.20   1.47 1.88 orange #DBB52D            TRUE       0.65           FALSE       0.000 0.09     FALSE      87
+
+=== Scenario: dancing45 dancing 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.01 1.49        green #317E31            TRUE       0.57           FALSE       0.096 0.02     FALSE      69
+   shoulders 1.00   1.00 1.94        green #2F7D31            TRUE       0.96           FALSE       0.308 0.07     FALSE      70
+       chest 1.00   1.00 1.52        green #2E7D31            TRUE       0.60           FALSE       0.760 0.04     FALSE      67
+  upper_back 1.00   1.00 1.89        green #2E7D31            TRUE       0.92           FALSE       0.458 0.06     FALSE      68
+        core 1.00   1.01 3.14        green #317E31            TRUE       1.65           FALSE       0.587 0.13     FALSE      71
+  lower_back 1.00   1.00 1.30        green #2E7D31           FALSE       0.38           FALSE       0.000 0.01     FALSE      63
+ hips_glutes 1.02   1.27 2.46 yellow-green #979F2F            TRUE       1.27           FALSE       0.034 0.17     FALSE      80
+        legs 1.08   1.27 1.68 yellow-green #99A02F            TRUE       0.63           FALSE       0.000 0.03     FALSE      79
+
+=== Scenario: downhill_skiing45 downhill_skiing 45 min  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.52  green #2E7D31            TRUE       0.61           FALSE       0.101 0.03     FALSE      70
+   shoulders 1.00   1.00 1.49  green #2E7D31            TRUE       0.58           FALSE       0.297 0.04     FALSE      68
+       chest 1.00   1.00 1.34  green #2E7D31           FALSE       0.43           FALSE       0.755 0.03     FALSE      67
+  upper_back 1.00   1.00 1.59  green #2E7D31            TRUE       0.67           FALSE       0.445 0.04     FALSE      66
+        core 1.00   1.02 4.09  green #378031            TRUE       2.03            TRUE       0.596 0.17     FALSE      74
+  lower_back 1.00   1.00 1.38  green #2E7D31           FALSE       0.47           FALSE       0.000 0.02     FALSE      62
+ hips_glutes 1.03   1.44 2.88 orange #D1B22E            TRUE       1.48           FALSE       0.034 0.29     FALSE      85
+        legs 1.21   1.44 1.83 orange #D1B22E            TRUE       0.60           FALSE       0.000 0.06     FALSE      86
+
+=== Scenario: bowling45 bowling 45 min [lowN: ATUS participation n < 10] ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.02   1.27 2.10 yellow-green #989F2F            TRUE       1.04           FALSE       0.103 0.12     FALSE      78
+   shoulders 1.00   1.09 2.60        green #568A31            TRUE       1.38           FALSE       0.309 0.14     FALSE      75
+       chest 1.00   1.00 2.13        green #2E7D31            TRUE       1.09           FALSE       0.754 0.07     FALSE      71
+  upper_back 1.00   1.03 2.21        green #398031            TRUE       1.14           FALSE       0.464 0.09     FALSE      71
+        core 1.00   1.01 2.80        green #347E31            TRUE       1.48           FALSE       0.594 0.12     FALSE      71
+  lower_back 1.00   1.00 1.31        green #307D31           FALSE       0.39           FALSE       0.000 0.01     FALSE      64
+ hips_glutes 1.01   1.17 1.89 yellow-green #759430            TRUE       0.91           FALSE       0.037 0.07     FALSE      76
+        legs 1.04   1.15 1.30        green #6B9130           FALSE       0.31           FALSE       0.000 0.00     FALSE      71
+
+=== Scenario: martial_arts45 martial_arts 45 min [lowN: ATUS participation n < 10] ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.01   1.44 3.64       orange #D2B22D            TRUE       1.85           FALSE       0.093 0.32     FALSE      82
+   shoulders 1.00   1.20 5.94 yellow-green #7E9730            TRUE       2.57            TRUE       0.310 0.30     FALSE      80
+       chest 1.00   1.03 6.86        green #3A8131            TRUE       2.78            TRUE       0.757 0.24     FALSE      80
+  upper_back 1.00   1.06 4.50        green #478531            TRUE       2.17            TRUE       0.450 0.21     FALSE      76
+        core 1.00   1.11 8.22        green #5D8C30            TRUE       3.04            TRUE       0.591 0.29     FALSE      80
+  lower_back 1.00   1.00 1.81        green #2E7D31            TRUE       0.85           FALSE       0.000 0.06     FALSE      66
+ hips_glutes 1.05   1.67 4.17       orange #F4AD2C            TRUE       2.00           FALSE       0.035 0.44     FALSE      90
+        legs 1.19   1.56 2.17       orange #F4BD2D            TRUE       0.87           FALSE       0.000 0.24     FALSE      90
+
+=== Scenario: rock_climbing45 rock_climbing 45 min [lowN: ATUS participation n < 10] ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.09   1.66 3.26       orange #F5AF2C            TRUE       1.58           FALSE       0.089 0.41     FALSE      85
+   shoulders 1.00   1.36 4.44 yellow-green #B6A92E            TRUE       2.15            TRUE       0.290 0.32     FALSE      81
+       chest 1.00   1.02 4.11        green #367F31            TRUE       2.04            TRUE       0.749 0.17     FALSE      76
+  upper_back 1.01   1.61 5.40       orange #F8BA2C            TRUE       2.41            TRUE       0.458 0.43     FALSE      86
+        core 1.00   1.08 4.80        green #4F8731            TRUE       2.26            TRUE       0.582 0.23     FALSE      76
+  lower_back 1.00   1.00 1.51        green #307D31            TRUE       0.60           FALSE       0.000 0.03     FALSE      63
+ hips_glutes 1.00   1.09 1.96        green #558931            TRUE       0.97           FALSE       0.036 0.08     FALSE      71
+        legs 1.03   1.17 1.44 yellow-green #739330            TRUE       0.48           FALSE       0.000 0.00     FALSE      72
+
+=== Scenario: yard_work45 yard_work 45 min  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.17   1.53 2.53 orange #EDBB2D            TRUE       1.11           FALSE       0.103 0.28     FALSE      81
+   shoulders 1.06   1.44 3.00 orange #D1B22E            TRUE       1.51           FALSE       0.298 0.28     FALSE      81
+       chest 1.00   1.02 1.94  green #357F31            TRUE       0.96           FALSE       0.755 0.07     FALSE      72
+  upper_back 1.00   1.10 1.92  green #598B30            TRUE       0.94           FALSE       0.445 0.07     FALSE      72
+        core 1.00   1.02 1.99  green #357F31            TRUE       0.99           FALSE       0.584 0.07     FALSE      70
+  lower_back 1.00   1.03 1.28  green #3B8131           FALSE       0.36           FALSE       0.000 0.00     FALSE      63
+ hips_glutes 1.01   1.10 1.48  green #588A30            TRUE       0.56           FALSE       0.035 0.01     FALSE      70
+        legs 1.05   1.13 1.27  green #648E30           FALSE       0.27           FALSE       0.000 0.00     FALSE      69
+
+=== Scenario: lift_bench_press45 weightlifting:bench_press 45 min  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.29   1.73 2.72 orange #F0A32C            TRUE       1.08           FALSE       0.106 0.44     FALSE      83
+   shoulders 1.31   2.13 3.98    red #D85D29            TRUE       1.61           FALSE       0.304 0.67     FALSE      86
+       chest 1.54   3.27 6.14    red #C62828           FALSE       1.99           FALSE       0.753 0.89      TRUE      94
+  upper_back 1.00   1.00 1.02  green #2E7D31           FALSE       0.03           FALSE       0.449 0.00     FALSE      62
+        core 1.00   1.00 1.08  green #2E7D31           FALSE       0.11           FALSE       0.602 0.00     FALSE      62
+  lower_back 1.00   1.00 1.00  green #2E7D31           FALSE       0.00           FALSE       0.000 0.00     FALSE      61
+ hips_glutes 1.00   1.00 1.02  green #2E7D31           FALSE       0.02           FALSE       0.036 0.00     FALSE      60
+        legs 1.00   1.00 1.01  green #2E7D31           FALSE       0.01           FALSE       0.000 0.00     FALSE      58
+
+=== Scenario: lift_back_squat45 weightlifting:back_squat 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.03        green #2E7D31           FALSE       0.04           FALSE       0.096 0.00     FALSE      68
+   shoulders 1.00   1.00 1.02        green #2E7D31           FALSE       0.03           FALSE       0.325 0.00     FALSE      65
+       chest 1.00   1.00 1.03        green #2E7D31           FALSE       0.05           FALSE       0.758 0.00     FALSE      65
+  upper_back 1.00   1.00 1.03        green #2E7D31           FALSE       0.04           FALSE       0.443 0.00     FALSE      63
+        core 1.00   1.00 1.22        green #2E7D31           FALSE       0.28           FALSE       0.591 0.01     FALSE      64
+  lower_back 1.00   1.00 1.06        green #2E7D31           FALSE       0.08           FALSE       0.000 0.00     FALSE      61
+ hips_glutes 1.14   1.37 1.90 yellow-green #B9AA2E            TRUE       0.73           FALSE       0.037 0.09     FALSE      80
+        legs 1.23   1.39 1.67 yellow-green #C2AD2E           FALSE       0.44           FALSE       0.000 0.02     FALSE      85
+
+=== Scenario: lift_deadlift45 weightlifting:deadlift 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.05 1.74        green #458431            TRUE       0.80           FALSE       0.105 0.05     FALSE      71
+   shoulders 1.00   1.00 1.15        green #2E7D31           FALSE       0.20           FALSE       0.310 0.02     FALSE      66
+       chest 1.00   1.00 1.22        green #2E7D31           FALSE       0.29           FALSE       0.754 0.03     FALSE      66
+  upper_back 1.00   1.15 3.30 yellow-green #6D9130            TRUE       1.72           FALSE       0.458 0.21     FALSE      78
+        core 1.00   1.00 2.63        green #2E7D31            TRUE       1.39           FALSE       0.599 0.10     FALSE      70
+  lower_back 1.00   1.11 2.01        green #5E8C30            TRUE       1.00           FALSE       0.000 0.09     FALSE      72
+ hips_glutes 1.14   1.71 3.15       orange #F2A62C            TRUE       1.47           FALSE       0.035 0.44     FALSE      88
+        legs 1.04   1.18 1.44 yellow-green #799530            TRUE       0.47           FALSE       0.000 0.00     FALSE      73
+
+=== Scenario: lift_overhead_press45 weightlifting:overhead_press 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.07   1.40 2.36 yellow-green #C4AE2E            TRUE       1.14           FALSE       0.097 0.21     FALSE      81
+   shoulders 1.20   2.22 5.90          red #D34E29            TRUE       2.30            TRUE       0.311 0.66     FALSE      89
+       chest 1.00   1.00 1.61        green #2E7D31            TRUE       0.69           FALSE       0.754 0.04     FALSE      68
+  upper_back 1.02   1.46 3.73       orange #D7B42D            TRUE       1.87           FALSE       0.442 0.34     FALSE      84
+        core 1.00   1.06 3.31        green #488531            TRUE       1.73           FALSE       0.581 0.17     FALSE      75
+  lower_back 1.00   1.00 1.07        green #2E7D31           FALSE       0.09           FALSE       0.000 0.00     FALSE      62
+ hips_glutes 1.00   1.00 1.24        green #2F7D31           FALSE       0.32           FALSE       0.039 0.01     FALSE      64
+        legs 1.00   1.01 1.11        green #337E31           FALSE       0.15           FALSE       0.000 0.00     FALSE      60
+
+=== Scenario: lift_barbell_row45 weightlifting:barbell_row 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.04   1.33 2.21 yellow-green #ACA62E            TRUE       1.08           FALSE       0.102 0.15     FALSE      78
+   shoulders 1.00   1.25 3.08 yellow-green #929D2F            TRUE       1.62           FALSE       0.308 0.23     FALSE      78
+       chest 1.00   1.00 1.31        green #2E7D31           FALSE       0.39           FALSE       0.762 0.03     FALSE      67
+  upper_back 1.21   2.24 5.64          red #D24C29            TRUE       2.23            TRUE       0.434 0.67     FALSE      91
+        core 1.00   1.00 1.30        green #2E7D31           FALSE       0.38           FALSE       0.584 0.03     FALSE      63
+  lower_back 1.00   1.04 1.50        green #408231            TRUE       0.59           FALSE       0.000 0.02     FALSE      66
+ hips_glutes 1.00   1.11 1.75        green #5D8C30            TRUE       0.81           FALSE       0.039 0.04     FALSE      71
+        legs 1.00   1.01 1.10        green #327E31           FALSE       0.14           FALSE       0.000 0.00     FALSE      60
+
+=== Scenario: lift_lat_pulldown_pullup45 weightlifting:lat_pulldown_pullup 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.06   1.38 2.34 yellow-green #BCAB2E            TRUE       1.14           FALSE       0.102 0.19     FALSE      79
+   shoulders 1.01   1.33 3.35 yellow-green #ADA62E            TRUE       1.73           FALSE       0.298 0.28     FALSE      79
+       chest 1.00   1.00 1.56        green #2E7D31            TRUE       0.64           FALSE       0.743 0.04     FALSE      68
+  upper_back 1.27   2.54 6.11          red #C62828            TRUE       2.27            TRUE       0.444 0.75      TRUE      92
+        core 1.00   1.06 3.31        green #488531            TRUE       1.73           FALSE       0.589 0.17     FALSE      75
+  lower_back 1.00   1.00 1.06        green #2E7D31           FALSE       0.08           FALSE       0.000 0.00     FALSE      62
+ hips_glutes 1.00   1.00 1.24        green #2E7D31           FALSE       0.31           FALSE       0.029 0.00     FALSE      64
+        legs 1.00   1.01 1.12        green #337E31           FALSE       0.16           FALSE       0.000 0.00     FALSE      61
+
+=== Scenario: lift_biceps_curl45 weightlifting:biceps_curl 45 min  ===
+        part lo89 median hi89  band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms  1.4   2.11 3.73   red #D95F29           FALSE       1.41           FALSE       0.094 0.71     FALSE      89
+   shoulders  1.0   1.08 2.38 green #518831            TRUE       1.25           FALSE       0.314 0.12     FALSE      75
+       chest  1.0   1.00 1.53 green #2E7D31            TRUE       0.62           FALSE       0.750 0.04     FALSE      67
+  upper_back  1.0   1.00 1.39 green #2E7D31           FALSE       0.48           FALSE       0.442 0.02     FALSE      66
+        core  1.0   1.00 2.09 green #2E7D31            TRUE       1.06           FALSE       0.589 0.07     FALSE      68
+  lower_back  1.0   1.00 1.05 green #2E7D31           FALSE       0.08           FALSE       0.000 0.00     FALSE      61
+ hips_glutes  1.0   1.00 1.25 green #2E7D31           FALSE       0.33           FALSE       0.038 0.01     FALSE      64
+        legs  1.0   1.01 1.10 green #337E31           FALSE       0.14           FALSE       0.000 0.00     FALSE      61
+
+=== Scenario: lift_triceps_extension45 weightlifting:triceps_extension 45 min  ===
+        part lo89 median hi89  band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms  1.4   2.10 3.72   red #DA6129           FALSE       1.40           FALSE       0.098 0.70     FALSE      89
+   shoulders  1.0   1.09 2.48 green #528831            TRUE       1.31           FALSE       0.304 0.12     FALSE      75
+       chest  1.0   1.00 1.44 green #2E7D31            TRUE       0.52           FALSE       0.762 0.03     FALSE      67
+  upper_back  1.0   1.00 1.35 green #2E7D31           FALSE       0.43           FALSE       0.454 0.02     FALSE      65
+        core  1.0   1.00 2.32 green #2F7D31            TRUE       1.21           FALSE       0.595 0.08     FALSE      68
+  lower_back  1.0   1.00 1.07 green #2E7D31           FALSE       0.10           FALSE       0.000 0.00     FALSE      61
+ hips_glutes  1.0   1.00 1.25 green #2E7D31           FALSE       0.33           FALSE       0.037 0.00     FALSE      63
+        legs  1.0   1.01 1.11 green #337E31           FALSE       0.15           FALSE       0.000 0.00     FALSE      60
+
+=== Scenario: lift_lunge45 weightlifting:lunge 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.08        green #2E7D31           FALSE       0.12           FALSE       0.107 0.00     FALSE      67
+   shoulders 1.00   1.00 1.03        green #2E7D31           FALSE       0.05           FALSE       0.304 0.01     FALSE      66
+       chest 1.00   1.00 1.05        green #2E7D32           FALSE       0.07           FALSE       0.762 0.01     FALSE      64
+  upper_back 1.00   1.00 1.05        green #2E7D31           FALSE       0.07           FALSE       0.440 0.01     FALSE      62
+        core 1.00   1.00 1.80        green #2E7D31            TRUE       0.85           FALSE       0.581 0.05     FALSE      66
+  lower_back 1.00   1.00 1.00        green #2E7D32           FALSE       0.00           FALSE       0.000 0.00     FALSE      62
+ hips_glutes 1.03   1.28 2.07 yellow-green #9DA12F            TRUE       1.00           FALSE       0.036 0.12     FALSE      79
+        legs 1.10   1.21 1.40 yellow-green #84992F            TRUE       0.36           FALSE       0.000 0.00     FALSE      75
+
+=== Scenario: lift_leg_press45 weightlifting:leg_press 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.10        green #2E7D31           FALSE       0.14           FALSE       0.097 0.00     FALSE      68
+   shoulders 1.00   1.00 1.06        green #2E7D31           FALSE       0.09           FALSE       0.309 0.01     FALSE      66
+       chest 1.00   1.00 1.09        green #2E7D31           FALSE       0.12           FALSE       0.755 0.02     FALSE      65
+  upper_back 1.00   1.00 1.08        green #2E7D31           FALSE       0.12           FALSE       0.444 0.01     FALSE      64
+        core 1.00   1.00 1.06        green #2E7D32           FALSE       0.08           FALSE       0.592 0.02     FALSE      63
+  lower_back 1.00   1.00 1.01        green #2E7D32           FALSE       0.01           FALSE       0.000 0.00     FALSE      61
+ hips_glutes 1.00   1.10 1.67        green #578A30            TRUE       0.74           FALSE       0.040 0.04     FALSE      72
+        legs 1.12   1.25 1.46 yellow-green #939E2F            TRUE       0.38           FALSE       0.000 0.00     FALSE      76
+
+=== Scenario: lift_plank45 weightlifting:plank 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.01 1.26        green #307D31           FALSE       0.33           FALSE       0.097 0.00     FALSE      69
+   shoulders 1.03   1.44 3.23       orange #D1B22E            TRUE       1.65           FALSE       0.318 0.30     FALSE      80
+       chest 1.00   1.00 1.62        green #2E7D31            TRUE       0.70           FALSE       0.757 0.04     FALSE      68
+  upper_back 1.00   1.00 1.42        green #2E7D31            TRUE       0.50           FALSE       0.455 0.02     FALSE      65
+        core 1.26   2.81 7.54          red #C62828            TRUE       2.58            TRUE       0.591 0.77      TRUE      93
+  lower_back 1.00   1.02 1.32        green #367F31           FALSE       0.40           FALSE       0.000 0.01     FALSE      64
+ hips_glutes 1.02   1.18 1.72 yellow-green #779530            TRUE       0.75           FALSE       0.030 0.04     FALSE      75
+        legs 1.00   1.02 1.10        green #357F31           FALSE       0.14           FALSE       0.000 0.00     FALSE      61
+
+=== Scenario: lift_calf_raise45 weightlifting:calf_raise 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.11        green #2E7D31           FALSE       0.15           FALSE       0.104 0.00     FALSE      67
+   shoulders 1.00   1.00 1.08        green #2E7D31           FALSE       0.11           FALSE       0.313 0.01     FALSE      66
+       chest 1.00   1.00 1.12        green #2E7D31           FALSE       0.16           FALSE       0.751 0.02     FALSE      64
+  upper_back 1.00   1.00 1.09        green #2E7D31           FALSE       0.13           FALSE       0.447 0.01     FALSE      63
+        core 1.00   1.00 1.04        green #2E7D32           FALSE       0.06           FALSE       0.590 0.01     FALSE      61
+  lower_back 1.00   1.00 1.01        green #2E7D32           FALSE       0.01           FALSE       0.000 0.00     FALSE      59
+ hips_glutes 1.00   1.00 1.09        green #2E7D31           FALSE       0.13           FALSE       0.030 0.00     FALSE      60
+        legs 1.15   1.29 1.50 yellow-green #9FA22F           FALSE       0.38           FALSE       0.000 0.00     FALSE      78
+
+=== Scenario: lift_hip_thrust45 weightlifting:hip_thrust 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.00   1.00 1.01        green #2E7D31           FALSE       0.01           FALSE       0.092 0.00     FALSE      66
+   shoulders 1.00   1.00 1.01        green #2E7D31           FALSE       0.01           FALSE       0.316 0.00     FALSE      64
+       chest 1.00   1.00 1.01        green #2E7D31           FALSE       0.02           FALSE       0.761 0.00     FALSE      64
+  upper_back 1.00   1.00 1.01        green #2E7D31           FALSE       0.02           FALSE       0.443 0.00     FALSE      61
+        core 1.00   1.00 1.11        green #2E7D31           FALSE       0.14           FALSE       0.591 0.00     FALSE      62
+  lower_back 1.00   1.00 1.02        green #2E7D31           FALSE       0.02           FALSE       0.000 0.00     FALSE      60
+ hips_glutes 1.15   1.39 1.89 yellow-green #C0AC2E            TRUE       0.71           FALSE       0.041 0.08     FALSE      80
+        legs 1.12   1.22 1.39 yellow-green #85992F           FALSE       0.31           FALSE       0.000 0.00     FALSE      74
+
+=== Scenario: lift_push_up45 weightlifting:push_up 45 min  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.06   1.36 2.22 yellow-green #B8AA2E            TRUE       1.07           FALSE       0.102 0.17     FALSE      79
+   shoulders 1.01   1.31 3.10 yellow-green #A7A42F            TRUE       1.62           FALSE       0.293 0.24     FALSE      80
+       chest 1.24   2.98 7.93          red #C62828            TRUE       2.68            TRUE       0.761 0.78      TRUE      94
+  upper_back 1.00   1.00 1.33        green #2E7D31           FALSE       0.41           FALSE       0.430 0.02     FALSE      66
+        core 1.00   1.05 3.04        green #458431            TRUE       1.60           FALSE       0.602 0.16     FALSE      74
+  lower_back 1.00   1.00 1.06        green #2E7D31           FALSE       0.08           FALSE       0.000 0.00     FALSE      61
+ hips_glutes 1.00   1.00 1.23        green #2F7D31           FALSE       0.30           FALSE       0.034 0.00     FALSE      64
+        legs 1.00   1.01 1.09        green #337E31           FALSE       0.12           FALSE       0.000 0.00     FALSE      61
+
+=== Scenario: lift_biceps_curl45_vig weightlifting:biceps_curl 45 min (vigorous)  ===
+        part lo89 median hi89         band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.81   3.19 6.34          red #C62828           FALSE       1.81           FALSE       0.106 0.95      TRUE      94
+   shoulders 1.00   1.17 3.96 yellow-green #729330            TRUE       1.99           FALSE       0.299 0.24     FALSE      79
+       chest 1.00   1.00 2.16        green #2E7D31            TRUE       1.11           FALSE       0.761 0.07     FALSE      69
+  upper_back 1.00   1.00 1.73        green #2E7D31            TRUE       0.79           FALSE       0.446 0.05     FALSE      66
+        core 1.00   1.00 3.46        green #2F7D31            TRUE       1.79           FALSE       0.589 0.13     FALSE      70
+  lower_back 1.00   1.00 1.13        green #2E7D31           FALSE       0.17           FALSE       0.000 0.01     FALSE      61
+ hips_glutes 1.00   1.00 1.47        green #2F7D31            TRUE       0.56           FALSE       0.035 0.02     FALSE      64
+        legs 1.00   1.03 1.21        green #398031           FALSE       0.27           FALSE       0.000 0.00     FALSE      62
+
+=== Scenario: lift_bench_press45_vig weightlifting:bench_press 45 min (vigorous)  ===
+        part lo89 median  hi89  band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.60   2.45  4.25   red #C82E28           FALSE       1.41           FALSE       0.098 0.86     FALSE      91
+   shoulders 1.62   3.23  6.70   red #C62828           FALSE       2.05            TRUE       0.292 0.90      TRUE      93
+       chest 2.16   5.66 10.95   red #C62828           FALSE       2.34            TRUE       0.765 0.97      TRUE      97
+  upper_back 1.00   1.00  1.04 green #2E7D31           FALSE       0.06           FALSE       0.450 0.00     FALSE      63
+        core 1.00   1.00  1.17 green #2E7D31           FALSE       0.23           FALSE       0.594 0.01     FALSE      63
+  lower_back 1.00   1.00  1.01 green #2E7D31           FALSE       0.01           FALSE       0.000 0.00     FALSE      61
+ hips_glutes 1.00   1.00  1.04 green #2E7D31           FALSE       0.05           FALSE       0.034 0.00     FALSE      61
+        legs 1.00   1.00  1.02 green #2E7D31           FALSE       0.03           FALSE       0.000 0.00     FALSE      58
+
+=== Scenario: tennis60_curl30 tennis 60 min + weightlifting:biceps_curl 30 min (vigorous)  ===
+        part lo89 median hi89   band   color straddlesCutoff log2_hi_lo highUncertainty offset_gt_B pRed saturated typ_pct
+        arms 1.81   3.17 6.56    red #C62828           FALSE       1.86           FALSE       0.106 0.95      TRUE      94
+   shoulders 1.02   1.67 6.41 orange #F4AC2C            TRUE       2.65            TRUE       0.298 0.46     FALSE      86
+       chest 1.00   1.03 4.71  green #3A8131            TRUE       2.24            TRUE       0.757 0.19     FALSE      78
+  upper_back 1.00   1.10 4.19  green #5A8B30            TRUE       2.07            TRUE       0.441 0.23     FALSE      78
+        core 1.00   1.12 5.81  green #5F8D30            TRUE       2.54            TRUE       0.588 0.25     FALSE      78
+  lower_back 1.00   1.01 1.66  green #307D31            TRUE       0.73           FALSE       0.000 0.04     FALSE      66
+ hips_glutes 1.02   1.42 3.39 orange #CBB02E            TRUE       1.73           FALSE       0.037 0.32     FALSE      84
+        legs 1.20   1.52 2.05 orange #EABA2D            TRUE       0.78           FALSE       0.000 0.18     FALSE      89
+
+=== Sanity check: multiples relative to each part's own baseline ===
+lift_hip_thrust45        hips_glutes 1.39 (yellow-green) vs legs 1.22 (yellow-green): OK (expected part at least as hot)
+lift_bench_press45       chest 3.27 (red) vs arms 1.73 (orange): OK (expected part at least as hot)
+lift_bench_press45_vig   chest 5.66 (red) vs arms 2.45 (red): OK (expected part at least as hot)
+lift_biceps_curl45       arms 2.11 (red) vs legs 1.01 (green): OK (expected part at least as hot)
+lift_back_squat45        legs 1.39 (yellow-green) vs arms 1.00 (green): OK (expected part at least as hot)
+swimming45               shoulders 2.63 (red) vs hips_glutes 1.08 (green): OK (expected part at least as hot)
+
+=== Sensitivity: run45 medians by phi (ASSUMPTION) ===
+            phi=0.05 phi=0.25 phi=0.5
+arms            1.04     1.03    1.02
+shoulders       1.01     1.00    1.00
+chest           1.00     1.00    1.00
+upper_back      1.00     1.00    1.00
+core            1.00     1.00    1.00
+lower_back      1.01     1.01    1.01
+hips_glutes     1.81     1.63    1.49
+legs            1.57     1.49    1.42
