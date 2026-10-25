@@ -254,11 +254,18 @@ describe('TS-vs-R golden criterion (spec §10 v0.7)', () => {
     return runModelDay(input, day, seed);
   }
 
-  it('passes golden criterion for 8 seeds (0 failing cells)', () => {
-    const scenarios = [...new Set(demo.rows.map((r) => r.scenario))];
-    expect(scenarios.length).toBeGreaterThan(30);
+  // One `it` per seed so each stays under vitest's ~60s worker RPC heartbeat
+  // (a single 8-seed loop caused CI exit 1 via "Timeout calling onTaskUpdate"
+  // even when every assertion passed).
+  const scenarios = [...new Set(demo.rows.map((r) => r.scenario))];
 
-    for (const seed of seeds) {
+  it('golden criterion has demo scenarios wired', () => {
+    expect(scenarios.length).toBeGreaterThan(30);
+    expect(seeds).toHaveLength(8);
+  });
+
+  for (const seed of seeds) {
+    it(`golden criterion seed ${String(seed)} (0 failing cells)`, () => {
       const failures: string[] = [];
       const excesses: number[] = [];
 
@@ -284,13 +291,6 @@ describe('TS-vs-R golden criterion (spec §10 v0.7)', () => {
           const log2w = Math.log2(r.hi / r.lo);
           if (Math.abs(log2w - 2) > 0.3 && ts.highUncertainty !== r.highU) {
             failures.push(`${scenario}/${r.part} highU`);
-          }
-
-          // smallBaseline exact match (deterministic)
-          if (ts.smallBaseline !== (r.offsetGtB > 0.5 ? true : ts.smallBaseline)) {
-            // Compare to R deterministic: use sedentary offset pattern via nominal
-            // Actual rule: match R's smallBaseline which equals F>B on nominal.
-            // Demo prints offset_gt_B (draw share); exact smallBaseline is tested above.
           }
 
           // Diagnostic offset_gt_B within 0.06 (spec §10 rule 6)
@@ -322,8 +322,8 @@ describe('TS-vs-R golden criterion (spec §10 v0.7)', () => {
         failures,
         `seed ${String(seed)}: ${failures.slice(0, 8).join('; ')}`,
       ).toEqual([]);
-    }
-  }, 600_000);
+    }, 120_000);
+  }
 
   it('can regenerate seed-2026 snapshot when BODY_REGEN_SNAPSHOT=1', () => {
     if (process.env.BODY_REGEN_SNAPSHOT !== '1') return;
