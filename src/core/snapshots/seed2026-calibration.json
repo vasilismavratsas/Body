@@ -1,0 +1,9 @@
+{
+  "seed": 2026,
+  "nDraws": 4000,
+  "sd": 4.13,
+  "p10": 28.08,
+  "p50": 32.27,
+  "p90": 38.39,
+  "note": "TS engine own snapshot (seed 2026); R reference 4.13/28.05/32.15/38.35 is not a test target"
+}
