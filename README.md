@@ -8,11 +8,11 @@ model and data from `reference/` → `src/data`.
 
 ## Architecture
 
-| Path         | Role                                                                                                |
-| ------------ | --------------------------------------------------------------------------------------------------- |
-| `src/core/`  | Pure TypeScript model v0.7 (Monte Carlo, share rule, pRed, saturated) + Web Worker. No React.       |
+| Path         | Role                                                                                               |
+| ------------ | -------------------------------------------------------------------------------------------------- |
+| `src/core/`  | Pure TypeScript model v0.7 (Monte Carlo, share rule, pRed, saturated) + Web Worker. No React.      |
 | `src/data/`  | Versioned JSON numbers with `status` and `sourceRefs`. 25 activities + 14 lifts × 3 intensities.   |
-| `src/ui/`    | React UI: body map, searchable activity picker, lift sub-form, detail panel, methods.               |
+| `src/ui/`    | React UI: body map, searchable activity picker, lift sub-form, detail panel, methods.              |
 | `reference/` | Source of truth: `spec.md` v0.7, `data-model.md`, `model.R`, CSVs, `demo_output_v7.txt`, fixtures. |
 
 **Rule:** never invent physiological numbers. Values live in `src/data` (converted from

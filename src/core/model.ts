@@ -213,7 +213,10 @@ export function dayToExtra(
       // weightlifting with no exercise → catalog resist_multi / weightlifting row (spec §13)
       if (a === 'weightlifting') a = 'weightlifting';
       if (!input.catalogIds.includes(a)) {
-        throw new ModelInputError(`input row ${String(i + 1)}: unknown activity '${a}'`, i);
+        throw new ModelInputError(
+          `input row ${String(i + 1)}: unknown activity '${a}'`,
+          i,
+        );
       }
       key = a;
     }
