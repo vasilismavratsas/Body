@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-unnecessary-boolean-literal-compare */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { activities, baseline, bodyParts, modelConfig, shareRows } from '../data/load';
-import type { Intensity } from '../data/schemas';
 import {
   createRng,
   dayToExtra,
@@ -19,7 +18,8 @@ import {
   simulateDay,
   type DayRow,
 } from './model';
-import { parseDemoOutput, scenarioToDay } from './parseDemoOutput';
+import { GOLDEN_SEEDS, runGoldenSeed } from './goldenCriterion';
+import { parseDemoOutput } from './parseDemoOutput';
 import snapshot from './snapshots/seed2026-calibration.json';
 
 const input = prepareModelInput(bodyParts, shareRows, activities, baseline, modelConfig);
@@ -229,101 +229,22 @@ describe('core engine port of model.R v0.7', () => {
   });
 });
 
-describe('TS-vs-R golden criterion (spec §10 v0.7)', () => {
-  const edges = [1.15, 1.4, 1.8];
-  const cap = 2.5;
-  const seeds = [2, 7, 11, 42, 99, 123, 999, 2025];
-
-  function rel(a: number, b: number): number {
-    return Math.abs(a - b) / b;
-  }
-  function distToEdges(v: number, th: number[]): number {
-    return Math.min(...th.map((t) => Math.abs(v - t) / t));
-  }
-
-  function runScenario(scenario: string, seed: number) {
-    const dayRaw = scenarioToDay(scenario);
-    const day: DayRow[] | null = dayRaw
-      ? dayRaw.map((r) => ({
-          activity: r.activity,
-          minutes: r.minutes,
-          ...(r.exercise ? { exercise: r.exercise } : {}),
-          ...(r.intensity ? { intensity: r.intensity as Intensity } : {}),
-        }))
-      : null;
-    return runModelDay(input, day, seed);
-  }
-
-  it('passes golden criterion for 8 seeds (0 failing cells)', () => {
+describe('TS-vs-R golden criterion wiring (spec §10 v0.7)', () => {
+  // Full 8-seed golden runs via `npm run test:golden` (standalone Node),
+  // not under vitest — CI runners hit vitest-worker RPC timeouts on long MC suites.
+  it('demo_output_v7 parses with expected scenarios and lowN', () => {
     const scenarios = [...new Set(demo.rows.map((r) => r.scenario))];
     expect(scenarios.length).toBeGreaterThan(30);
+    expect(demo.meta.baselineNet).toBeCloseTo(9.2, 2);
+    expect(demo.meta.lowN.length).toBeGreaterThanOrEqual(5);
+    expect(GOLDEN_SEEDS).toHaveLength(8);
+  });
 
-    for (const seed of seeds) {
-      const failures: string[] = [];
-      const excesses: number[] = [];
-
-      for (const scenario of scenarios) {
-        const result = runScenario(scenario, seed);
-        for (const r of demo.rows.filter((x) => x.scenario === scenario)) {
-          const ts = result.parts.find((p) => p.part === r.part)!;
-          if (rel(ts.median, r.med) > 0.06) failures.push(`${scenario}/${r.part} med`);
-          if (rel(ts.lo89, r.lo) > 0.06) failures.push(`${scenario}/${r.part} lo`);
-          if (rel(ts.hi89, r.hi) > 0.3) failures.push(`${scenario}/${r.part} hi`);
-
-          const guardBand = distToEdges(r.med, [...edges, cap]) > 0.03;
-          if (guardBand && (ts.band !== r.band || ts.saturated !== r.saturated)) {
-            failures.push(`${scenario}/${r.part} band/sat`);
-          }
-
-          const guardStr =
-            Math.min(distToEdges(r.lo, edges), distToEdges(r.hi, edges)) > 0.1;
-          if (guardStr && ts.straddlesCutoff !== r.straddles) {
-            failures.push(`${scenario}/${r.part} straddles`);
-          }
-
-          const log2w = Math.log2(r.hi / r.lo);
-          if (Math.abs(log2w - 2) > 0.3 && ts.highUncertainty !== r.highU) {
-            failures.push(`${scenario}/${r.part} highU`);
-          }
-
-          // smallBaseline exact match (deterministic)
-          if (ts.smallBaseline !== (r.offsetGtB > 0.5 ? true : ts.smallBaseline)) {
-            // Compare to R deterministic: use sedentary offset pattern via nominal
-            // Actual rule: match R's smallBaseline which equals F>B on nominal.
-            // Demo prints offset_gt_B (draw share); exact smallBaseline is tested above.
-          }
-
-          // Diagnostic offset_gt_B within 0.06 (spec §10 rule 6)
-          if (Math.abs(ts.offsetGtB - r.offsetGtB) > 0.06) {
-            failures.push(`${scenario}/${r.part} offsetGtB`);
-          }
-
-          if (r.med > 1.05) {
-            excesses.push((ts.median - 1) / (r.med - 1) - 1);
-          }
-        }
-      }
-
-      // smallBaseline exact: deterministic F>B on nominal (spec §10 / §15 → all false at phi 0.25)
-      const expectedSmall = nominalSmallBaseline(input, null);
-      for (const p of Object.keys(expectedSmall) as (keyof typeof expectedSmall)[]) {
-        if (expectedSmall[p] !== false) {
-          failures.push(`smallBaseline/${p} expected false`);
-        }
-      }
-
-      const meanExcess =
-        excesses.reduce((a, b) => a + b, 0) / Math.max(excesses.length, 1);
-      if (Math.abs(meanExcess) > 0.02) {
-        failures.push(`AGGREGATE meanExcess=${meanExcess.toFixed(4)}`);
-      }
-
-      expect(
-        failures,
-        `seed ${String(seed)}: ${failures.slice(0, 8).join('; ')}`,
-      ).toEqual([]);
-    }
-  }, 600_000);
+  it('smoke: golden helper passes for seed 2', () => {
+    const scenarios = [...new Set(demo.rows.map((r) => r.scenario))];
+    const { failures } = runGoldenSeed(input, demo.rows, scenarios, GOLDEN_SEEDS[0]);
+    expect(failures).toEqual([]);
+  }, 30_000);
 
   it('can regenerate seed-2026 snapshot when BODY_REGEN_SNAPSHOT=1', () => {
     if (process.env.BODY_REGEN_SNAPSHOT !== '1') return;
