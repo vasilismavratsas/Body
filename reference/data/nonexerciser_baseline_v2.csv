@@ -1,0 +1,28 @@
+activity_id,mean_min_per_day,compendium_code,MET,MET_h,status
+sleep,543.9,07030,1.0,9.065,"cited (IPUMS ATUS 2024 microdata, weighted)"
+personal_care_nonsleep,44.6,13040,2.0,1.488,"cited (IPUMS ATUS 2024 microdata, weighted)"
+eating,73.2,13030,1.5,1.83,"cited (IPUMS ATUS 2024 microdata, weighted)"
+housework,39.3,05040,2.5,1.637,"cited (IPUMS ATUS 2024 microdata, weighted)"
+food_prep,40.7,05050,2.0,1.357,"cited (IPUMS ATUS 2024 microdata, weighted)"
+lawn_garden,12.5,08245,3.8,0.793,"cited (IPUMS ATUS 2024 microdata, weighted)"
+hh_management,11.7,09040,1.3,0.254,"cited (IPUMS ATUS 2024 microdata, weighted); ATUS 0209 household management mapped to Compendium 09040 sitting desk work/writing (intended)"
+hh_other_residual,24.7,05025,2.8,1.154,"cited (IPUMS ATUS 2024 microdata, weighted)"
+purchasing,42.0,05065,2.3,1.608,"cited (IPUMS ATUS 2024 microdata, weighted)"
+care_household,33.8,05184,2.5,1.407,"cited (IPUMS ATUS 2024 microdata, weighted)"
+care_nonhousehold,10.4,05184,2.5,0.434,"cited (IPUMS ATUS 2024 microdata, weighted)"
+work,219.7,11580,1.5,5.492,"cited (IPUMS ATUS 2024 microdata, weighted)"
+education,14.9,09065,1.8,0.446,"cited (IPUMS ATUS 2024 microdata, weighted)"
+org_civic_religious,19.2,09055,1.3,0.416,"cited (IPUMS ATUS 2024 microdata, weighted)"
+socializing,32.4,09055,1.3,0.701,"cited (IPUMS ATUS 2024 microdata, weighted)"
+tv,163.1,07020,1.0,2.719,"cited (IPUMS ATUS 2024 microdata, weighted)"
+sports_exercise,1.6,07021,1.0,0.027,"cited (IPUMS ATUS 2024 microdata, weighted); residual non-1301 category-13 time (1302 attending sporting events etc.) mapped to sitting"
+other_leisure_residual,92.4,09040,1.3,2.001,"cited (IPUMS ATUS 2024 microdata, weighted)"
+phone_mail,7.6,09055,1.3,0.164,"cited (IPUMS ATUS 2024 microdata, weighted)"
+other_nec,12.3,07021,1.0,0.206,"cited (IPUMS ATUS 2024 microdata, weighted)"
+TOTAL_gross,1440.0,,,33.20,gross = sum(min/60 x MET)
+TOTAL_net,,,,9.20,net = gross - 24 h x 1.0 MET (v1 definition)
+per_person_gross_sd,,,,4.40,weighted
+per_person_gross_p10,,,,28.22,weighted
+per_person_gross_p50,,,,32.60,weighted
+per_person_gross_p90,,,,38.80,weighted
+

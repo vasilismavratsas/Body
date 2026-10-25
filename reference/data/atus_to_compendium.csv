@@ -1,0 +1,22 @@
+atus_activity_id,compendium_code,MET,rationale
+sleep,07030,1.0,Direct match
+personal_care_nonsleep,13040,2.0,Grooming/dressing dominates the non-sleep personal care category
+eating,13030,1.5,Most eating is seated
+housework,05040,2.5,Population-average housework assumed light; vacuuming (05043) is 3.0
+food_prep,05050,2.0,The general/light cooking code fits a mix of standing and sitting
+lawn_garden,08245,3.8,General moderate gardening
+hh_management,09040,1.3,Paperwork and bills are desk-type work
+hh_other_residual,05025,2.8,Pets/vehicle/repair mix; ASSUMED
+purchasing,05065,2.3,CHANGED from 05060 (3.3): ATUS purchasing includes non-food shopping and waiting; 05065 non-food shopping standing/walking=2.3. Still ignores travel (16010 driving 2.0)
+care_household,05184,2.5,CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound
+care_nonhousehold,05184,2.5,CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound
+work,11580,1.5,Population is mostly desk work; MAJOR uncertainty (11600=1.8; 11610=3.3)
+education,09065,1.8,Sitting in class
+org_civic_religious,09055,1.3,Mostly seated with talking
+socializing,09055,1.3,Seated conversation
+tv,07020,1.0,Direct match
+sports_exercise,07021,1.0,Reassigned to sitting for the non-exerciser baseline
+other_leisure_residual,09040,1.3,Reading/computer/games; reading alone is 09030=1.0
+phone_mail,09055,1.3,Direct match
+other_nec,07021,1.0,Unknown activities defaulted to sitting
+
