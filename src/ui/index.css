@@ -240,23 +240,27 @@ polygon.desaturated {
 .legend {
   margin-top: 1rem;
   display: grid;
-  gap: 0.4rem;
+  gap: 0.55rem;
   font-size: 0.88rem;
   color: var(--muted);
 }
 
 .legend li {
   display: grid;
-  grid-template-columns: 1.4rem 1fr;
-  gap: 0.55rem;
+  /* ≥24×24 swatches (round-2 §A.3) */
+  grid-template-columns: 24px 1fr;
+  gap: 0.65rem;
   align-items: start;
 }
 
 .swatch {
-  width: 1.2rem;
-  height: 1.2rem;
-  border: 1px solid var(--line);
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border: 1px solid var(--ink);
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .swatch.ramp {
@@ -279,7 +283,7 @@ polygon.desaturated {
   border-width: 2px;
 }
 
-.sr-table {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -289,6 +293,141 @@ polygon.desaturated {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.parts-table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.parts-table th,
+.parts-table td {
+  text-align: left;
+  padding: 0.35rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.parts-table caption {
+  text-align: left;
+  font-weight: 650;
+  margin-bottom: 0.35rem;
+}
+
+.activity-picker {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.activity-picker > label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.combobox {
+  position: relative;
+}
+
+.combobox input {
+  width: 100%;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.combobox-list {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  overflow: auto;
+  margin: 0.2rem 0 0;
+  padding: 0.25rem 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(28, 36, 40, 0.12);
+}
+
+.combobox-group-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.35rem 0.65rem 0.15rem;
+}
+
+.combobox-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.combobox-list [role='option'] {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.4rem 0.65rem;
+  cursor: pointer;
+}
+
+.combobox-list [role='option'].is-active,
+.combobox-list [role='option']:hover {
+  background: color-mix(in srgb, var(--accent) 12%, white);
+}
+
+.lift-form {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.lift-row {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.6rem 0.65rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.lift-row label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.lift-row select,
+.lift-row input {
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.badge.low-n {
+  border-color: color-mix(in srgb, var(--warn) 35%, transparent);
+  color: var(--warn);
+  font-size: 0.72rem;
+}
+
+.low-n-note {
+  margin: 0.25rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.pred {
+  margin: 0.25rem 0 0.5rem;
 }
 
 .detail .multiple {

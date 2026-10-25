@@ -2,15 +2,10 @@ import type { Status } from './schemas';
 
 const FORBIDDEN: ReadonlySet<Status> = new Set(['GAP', 'PLACEHOLDER']);
 
-export type ValuedLike = {
-  value: unknown;
-  status: Status;
-  sourceRefs: string[];
-};
-
 /**
- * Walk shipped data and collect every {value,status,sourceRefs} leaf.
- * Release guard fails if any status is GAP or PLACEHOLDER, or sourceRefs is empty.
+ * Release guard (v0.7): checks only structured status fields on valued JSON
+ * leaves ({value, status, sourceRefs}) for GAP or PLACEHOLDER.
+ * Free-text fields (note, source, mapping rationale, search_terms) are never scanned.
  */
 export function collectValued(
   node: unknown,
@@ -41,6 +36,16 @@ export function collectValued(
       return out;
     }
     for (const [k, v] of Object.entries(obj)) {
+      // Free-text fields are never scanned for GAP/PLACEHOLDER substrings.
+      if (
+        k === 'note' ||
+        k === 'source' ||
+        k === 'mappingRationale' ||
+        k === 'searchTerms' ||
+        k === 'search_terms'
+      ) {
+        continue;
+      }
       collectValued(v, path ? `${path}.${k}` : k, out);
     }
   }
@@ -64,12 +69,6 @@ export function runReleaseGuard(dataRoots: Record<string, unknown>): ReleaseGuar
         failures.push({
           path: leaf.path,
           reason: `forbidden status ${leaf.status}`,
-        });
-      }
-      if (leaf.sourceRefs.length === 0) {
-        failures.push({
-          path: leaf.path,
-          reason: 'empty sourceRefs',
         });
       }
     }

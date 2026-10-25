@@ -2,7 +2,9 @@
   {
     "id": "walk_brisk",
     "name": "Walking",
-    "top10Rank": 1,
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["walking", "walk", "brisk walk", "power walking"],
     "compendiumCode": {
       "value": "17200",
       "status": "cited",
@@ -23,40 +25,40 @@
       "sigmaLog": {
         "value": 0.198042,
         "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
       },
+      "sigmaSource": "cv0.20",
       "cv": {
         "value": 0.2,
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
+        "sourceRefs": ["spec §12 / model.R A4"]
       }
     },
+    "shareRow": "walking",
     "shareRowId": "walking",
+    "catalogActivityId": "walk_brisk",
+    "metId": "walk_brisk",
+    "lowN": false,
     "activityToSharePairing": {
       "value": "walking",
       "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 43.9,
-      "status": "cited",
       "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
       ]
     },
     "sourceRefs": [
       "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
+      "activity_catalog.csv",
+      "spec.md §12"
     ]
   },
   {
     "id": "jog",
-    "name": "Running / jogging",
-    "top10Rank": 2,
+    "name": "Running",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["running", "run", "jogging", "jog"],
     "compendiumCode": {
       "value": "12020",
       "status": "cited",
@@ -77,40 +79,40 @@
       "sigmaLog": {
         "value": 0.198042,
         "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
       },
+      "sigmaSource": "cv0.20",
       "cv": {
         "value": 0.2,
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
+        "sourceRefs": ["spec §12 / model.R A4"]
       }
     },
+    "shareRow": "running",
     "shareRowId": "running",
+    "catalogActivityId": "jog",
+    "metId": "jog",
+    "lowN": false,
     "activityToSharePairing": {
       "value": "running",
       "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 11.6,
-      "status": "cited",
       "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
       ]
     },
     "sourceRefs": [
       "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
+      "activity_catalog.csv",
+      "spec.md §12"
     ]
   },
   {
-    "id": "resist_multi",
+    "id": "weightlifting",
     "name": "Weightlifting",
-    "top10Rank": 3,
+    "kind": "liftParent",
+    "group": "Strength",
+    "searchTerms": ["weightlifting", "weights", "lifting", "gym", "resistance training"],
     "compendiumCode": {
       "value": "02054",
       "status": "cited",
@@ -131,94 +133,2723 @@
       "sigmaLog": {
         "value": 0.198042,
         "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
       },
+      "sigmaSource": "cv0.20",
       "cv": {
         "value": 0.2,
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
+        "sourceRefs": ["spec §12 / model.R A4"]
       }
     },
+    "shareRow": "weightlifting",
     "shareRowId": "weightlifting",
+    "catalogActivityId": "resist_multi",
+    "metId": "resist_multi",
+    "lowN": false,
     "activityToSharePairing": {
       "value": "weightlifting",
       "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 10.7,
-      "status": "cited",
       "sourceRefs": [
-        "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0345026",
-        "BRFSS 2019 top-2 activities (top10.csv)"
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
       ]
     },
     "sourceRefs": [
       "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
-    ]
-  },
-  {
-    "id": "garden",
-    "name": "Gardening",
-    "top10Rank": 4,
-    "compendiumCode": {
-      "value": "08245",
-      "status": "cited",
-      "sourceRefs": [
-        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-        "Gardening, general, moderate"
-      ]
-    },
-    "met": {
-      "median": {
-        "value": 3.8,
-        "status": "cited",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ],
+    "children": [
+      {
+        "exerciseId": "bench_press",
+        "name": "Bench Press",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 94,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: triceps 94",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 115,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: anterior deltoid 115",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 124,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: PM sternal 121, clavicular 127",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 5,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: triceps 94"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: anterior deltoid 115"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: PM sternal 121, clavicular 127"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:bench_press",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
         "sourceRefs": [
-          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-          "code 08245"
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: triceps 94",
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: anterior deltoid 115",
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Schoenfeld BJ et al. 2016 Isokinetics Exerc Sci, 'Upper body muscle activation during low- versus high-load resistance exercise in the bench press' (copy: https://bretcontreras.com/wp-content/uploads/Upper-body-muscle-activation-during-lowversus-high-load-resistance-exercise-in-the-bench-press.pdf) Table 2, 80% 1RM mean %MVIC: PM sternal 121, clavicular 127",
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
         ]
       },
-      "sigmaLog": {
-        "value": 0.198042,
-        "status": "ASSUMPTION",
+      {
+        "exerciseId": "back_squat",
+        "name": "Back Squat",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 37.32,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean upper GM 29.35, lower GM 45.29",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 62.64,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean BF 14.92, VL 110.35",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean upper GM 29.35, lower GM 45.29"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean BF 14.92, VL 110.35"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:back_squat",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "moderate",
         "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean upper GM 29.35, lower GM 45.29",
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean BF 14.92, VL 110.35"
         ]
       },
-      "cv": {
-        "value": 0.2,
-        "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
+      {
+        "exerciseId": "deadlift",
+        "name": "Deadlift",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:deadlift",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "moderate",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "overhead_press",
+        "name": "Overhead Press",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:overhead_press",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "barbell_row",
+        "name": "Barbell Row",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:barbell_row",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "lat_pulldown_pullup",
+        "name": "Lat Pulldown Pullup",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:lat_pulldown_pullup",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "biceps_curl",
+        "name": "Biceps Curl",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 5,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:biceps_curl",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "triceps_extension",
+        "name": "Triceps Extension",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 5,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:triceps_extension",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "lunge",
+        "name": "Lunge",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:lunge",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "leg_press",
+        "name": "Leg Press",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:leg_press",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "plank",
+        "name": "Plank",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:plank",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02024",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 2.8,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02024",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 2.8,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02024",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 2.8,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "moderate",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "calf_raise",
+        "name": "Calf Raise",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:calf_raise",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
+      },
+      {
+        "exerciseId": "hip_thrust",
+        "name": "Hip Thrust",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 78.11,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean upper GM 69.46, lower GM 86.75",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 70.13,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean BF 40.78, VL 99.47",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean upper GM 69.46, lower GM 86.75"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "cited",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean BF 40.78, VL 99.47"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:hip_thrust",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02054",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3.5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02052",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 5,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02050",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 6,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "light",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean upper GM 69.46, lower GM 86.75",
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized; r2_8 cited index | Contreras B et al. 2015 J Appl Biomech 31(6):452-8 https://doi.org/10.1123/jab.2014-0301 Table 1 (mean %MVIC, 10RM, n=13 trained women): mean BF 40.78, VL 99.47"
+        ]
+      },
+      {
+        "exerciseId": "push_up",
+        "name": "Push Up",
+        "shares": {
+          "index": {
+            "arms": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "shoulders": {
+              "value": 20,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "chest": {
+              "value": 50,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "upper_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "core": {
+              "value": 10,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "lower_back": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "hips_glutes": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            },
+            "legs": {
+              "value": 2,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round",
+                "share_1"
+              ]
+            }
+          },
+          "mass": {
+            "arms": {
+              "value": 0.148,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "shoulders": {
+              "value": 0.0634,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "chest": {
+              "value": 0.0528,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "upper_back": {
+              "value": 0.074,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "core": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "lower_back": {
+              "value": 0.0423,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "hips_glutes": {
+              "value": 0.1443,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            },
+            "legs": {
+              "value": 0.4329,
+              "status": "ASSUMPTION",
+              "sourceRefs": [
+                "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+              ]
+            }
+          }
+        },
+        "shareRowId": "lift:push_up",
+        "metByIntensity": {
+          "light": {
+            "code": {
+              "value": "02056",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "moderate": {
+            "code": {
+              "value": "02056",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          },
+          "vigorous": {
+            "code": {
+              "value": "02056",
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            },
+            "MET": {
+              "value": 3,
+              "status": "cited",
+              "sourceRefs": [
+                "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+                "lifts_v1.1.csv (2024 Adult Compendium)"
+              ]
+            }
+          }
+        },
+        "defaultIntensity": "moderate",
+        "sourceRefs": [
+          "prime-mover fallback r2_5 (primary 50/secondary 20/stabilizer 10/other 2) x mass, normalized | prime-mover classification by functional anatomy; EMG %MVC studies not retrieved this round"
+        ]
       }
-    },
-    "shareRowId": "gardening",
-    "activityToSharePairing": {
-      "value": "gardening",
-      "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 5.8,
-      "status": "cited",
-      "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
-      ]
-    },
-    "sourceRefs": [
-      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
     ]
   },
   {
     "id": "bike_leisure",
-    "name": "Bicycling",
-    "top10Rank": 5,
+    "name": "Cycling",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["cycling", "biking", "bike", "bicycle"],
     "compendiumCode": {
       "value": "01010",
       "status": "cited",
@@ -239,256 +2870,40 @@
       "sigmaLog": {
         "value": 0.198042,
         "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
       },
+      "sigmaSource": "cv0.20",
       "cv": {
         "value": 0.2,
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
+        "sourceRefs": ["spec §12 / model.R A4"]
       }
     },
+    "shareRow": "bicycling",
     "shareRowId": "bicycling",
+    "catalogActivityId": "bike_leisure",
+    "metId": "bike_leisure",
+    "lowN": false,
     "activityToSharePairing": {
       "value": "bicycling",
       "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 3.8,
-      "status": "cited",
       "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
       ]
     },
     "sourceRefs": [
       "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
-    ]
-  },
-  {
-    "id": "yard",
-    "name": "Yard work",
-    "top10Rank": 6,
-    "compendiumCode": {
-      "value": "08261",
-      "status": "cited",
-      "sourceRefs": [
-        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-        "Yardwork, general, moderate"
-      ]
-    },
-    "met": {
-      "median": {
-        "value": 4,
-        "status": "cited",
-        "sourceRefs": [
-          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-          "code 08261"
-        ]
-      },
-      "sigmaLog": {
-        "value": 0.198042,
-        "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
-      },
-      "cv": {
-        "value": 0.2,
-        "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
-      }
-    },
-    "shareRowId": "gardening",
-    "activityToSharePairing": {
-      "value": "gardening",
-      "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 2.8,
-      "status": "cited",
-      "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
-      ]
-    },
-    "sourceRefs": [
-      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
-    ]
-  },
-  {
-    "id": "chore_clean_light",
-    "name": "Household activities",
-    "top10Rank": 7,
-    "compendiumCode": {
-      "value": "05040",
-      "status": "cited",
-      "sourceRefs": [
-        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-        "Cleaning, general, light"
-      ]
-    },
-    "met": {
-      "median": {
-        "value": 2.5,
-        "status": "cited",
-        "sourceRefs": [
-          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-          "code 05040"
-        ]
-      },
-      "sigmaLog": {
-        "value": 0.198042,
-        "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
-      },
-      "cv": {
-        "value": 0.2,
-        "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
-      }
-    },
-    "shareRowId": "household",
-    "activityToSharePairing": {
-      "value": "household",
-      "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 2.6,
-      "status": "cited",
-      "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
-      ]
-    },
-    "sourceRefs": [
-      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
-    ]
-  },
-  {
-    "id": "calisthenics_mod",
-    "name": "Calisthenics",
-    "top10Rank": 8,
-    "compendiumCode": {
-      "value": "02022",
-      "status": "cited",
-      "sourceRefs": [
-        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-        "Calisthenics, moderate"
-      ]
-    },
-    "met": {
-      "median": {
-        "value": 3.8,
-        "status": "cited",
-        "sourceRefs": [
-          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-          "code 02022"
-        ]
-      },
-      "sigmaLog": {
-        "value": 0.198042,
-        "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
-      },
-      "cv": {
-        "value": 0.2,
-        "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
-      }
-    },
-    "shareRowId": "calisthenics",
-    "activityToSharePairing": {
-      "value": "calisthenics",
-      "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 2.4,
-      "status": "cited",
-      "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
-      ]
-    },
-    "sourceRefs": [
-      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
-    ]
-  },
-  {
-    "id": "yoga_hatha",
-    "name": "Yoga",
-    "top10Rank": 9,
-    "compendiumCode": {
-      "value": "02150",
-      "status": "cited",
-      "sourceRefs": [
-        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-        "Yoga, Hatha"
-      ]
-    },
-    "met": {
-      "median": {
-        "value": 2.3,
-        "status": "cited",
-        "sourceRefs": [
-          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-          "code 02150"
-        ]
-      },
-      "sigmaLog": {
-        "value": 0.198042,
-        "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
-      },
-      "cv": {
-        "value": 0.2,
-        "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
-      }
-    },
-    "shareRowId": "yoga",
-    "activityToSharePairing": {
-      "value": "yoga",
-      "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 2.2,
-      "status": "cited",
-      "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
-      ]
-    },
-    "sourceRefs": [
-      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
+      "activity_catalog.csv",
+      "spec.md §12"
     ]
   },
   {
     "id": "indoor_bike_general",
-    "name": "Indoor biking",
-    "top10Rank": 10,
+    "name": "Indoor Cycling",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["indoor cycling", "stationary bike", "spin", "spinning", "Peloton"],
     "compendiumCode": {
       "value": "01200",
       "status": "cited",
@@ -509,34 +2924,1074 @@
       "sigmaLog": {
         "value": 0.198042,
         "status": "ASSUMPTION",
-        "sourceRefs": [
-          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
-        ]
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
       },
+      "sigmaSource": "cv0.20",
       "cv": {
         "value": 0.2,
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A4"]
+        "sourceRefs": ["spec §12 / model.R A4"]
       }
     },
+    "shareRow": "indoor_biking",
     "shareRowId": "indoor_biking",
+    "catalogActivityId": "indoor_bike_general",
+    "metId": "indoor_bike_general",
+    "lowN": false,
     "activityToSharePairing": {
       "value": "indoor_biking",
       "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
-    },
-    "prevalencePct": {
-      "value": 2.2,
-      "status": "cited",
       "sourceRefs": [
-        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
-        "BRFSS 2019 top-2 activities (top10.csv)"
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
       ]
     },
     "sourceRefs": [
       "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
-      "top10.csv",
-      "model.R A3"
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "calisthenics_mod",
+    "name": "Calisthenics",
+    "kind": "activity",
+    "group": "Strength",
+    "searchTerms": ["calisthenics", "bodyweight", "push-ups", "sit-ups", "jumping jacks"],
+    "compendiumCode": {
+      "value": "02022",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Calisthenics, moderate"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 3.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02022"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
+      },
+      "sigmaSource": "cv0.20",
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4"]
+      }
+    },
+    "shareRow": "calisthenics",
+    "shareRowId": "calisthenics",
+    "catalogActivityId": "calisthenics_mod",
+    "metId": "calisthenics_mod",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "calisthenics",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "yoga_hatha",
+    "name": "Yoga",
+    "kind": "activity",
+    "group": "Strength",
+    "searchTerms": ["yoga", "hatha", "stretching", "vinyasa"],
+    "compendiumCode": {
+      "value": "02150",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Yoga, Hatha"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 2.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02150"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
+      },
+      "sigmaSource": "cv0.20",
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4"]
+      }
+    },
+    "shareRow": "yoga",
+    "shareRowId": "yoga",
+    "catalogActivityId": "yoga_hatha",
+    "metId": "yoga_hatha",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "yoga",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "garden",
+    "name": "Gardening",
+    "kind": "activity",
+    "group": "Outdoor",
+    "searchTerms": ["gardening", "garden", "planting", "weeding"],
+    "compendiumCode": {
+      "value": "08245",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Gardening, general, moderate"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 3.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 08245"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
+      },
+      "sigmaSource": "cv0.20",
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4"]
+      }
+    },
+    "shareRow": "gardening",
+    "shareRowId": "gardening",
+    "catalogActivityId": "garden",
+    "metId": "garden",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "gardening",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "chore_clean_light",
+    "name": "Housework",
+    "kind": "activity",
+    "group": "Daily life",
+    "searchTerms": ["housework", "cleaning", "chores", "vacuuming", "household"],
+    "compendiumCode": {
+      "value": "05040",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Cleaning, general, light"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 2.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05040"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
+      },
+      "sigmaSource": "cv0.20",
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4"]
+      }
+    },
+    "shareRow": "household",
+    "shareRowId": "household",
+    "catalogActivityId": "chore_clean_light",
+    "metId": "chore_clean_light",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "household",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "swimming",
+    "name": "Swimming",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["swimming", "swim", "laps", "pool"],
+    "compendiumCode": {
+      "value": "18310",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 6,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 18310"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.223331,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "swimming",
+    "shareRowId": "swimming",
+    "catalogActivityId": "swimming",
+    "metId": "swimming",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "swimming",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "tennis",
+    "name": "Tennis",
+    "kind": "activity",
+    "group": "Sports",
+    "searchTerms": ["tennis", "racquet", "racket sports"],
+    "compendiumCode": {
+      "value": "15675",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 6.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 15675"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.180026,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "tennis",
+    "shareRowId": "tennis",
+    "catalogActivityId": "tennis",
+    "metId": "tennis",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "tennis",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "basketball",
+    "name": "Basketball",
+    "kind": "activity",
+    "group": "Sports",
+    "searchTerms": ["basketball", "hoops", "shooting baskets"],
+    "compendiumCode": {
+      "value": "15055",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 7.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 15055"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.194173,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "basketball",
+    "shareRowId": "basketball",
+    "catalogActivityId": "basketball",
+    "metId": "basketball",
+    "lowN": true,
+    "activityToSharePairing": {
+      "value": "basketball",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "soccer",
+    "name": "Soccer",
+    "kind": "activity",
+    "group": "Sports",
+    "searchTerms": ["soccer", "football (soccer)", "futbol"],
+    "compendiumCode": {
+      "value": "15610",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 7,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 15610"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.312431,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "soccer",
+    "shareRowId": "soccer",
+    "catalogActivityId": "soccer",
+    "metId": "soccer",
+    "lowN": true,
+    "activityToSharePairing": {
+      "value": "soccer",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "elliptical",
+    "name": "Elliptical",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["elliptical", "cross trainer", "cardio machine"],
+    "compendiumCode": {
+      "value": "02048",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02048"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.183913,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "elliptical",
+    "shareRowId": "elliptical",
+    "catalogActivityId": "elliptical",
+    "metId": "elliptical",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "elliptical",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "rowing_machine",
+    "name": "Rowing Machine",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["rowing machine", "rower", "erg", "indoor rowing"],
+    "compendiumCode": {
+      "value": "02071",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02071"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.322159,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "rowing_machine",
+    "shareRowId": "rowing_machine",
+    "catalogActivityId": "rowing_machine",
+    "metId": "rowing_machine",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "rowing_machine",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "hiking",
+    "name": "Hiking",
+    "kind": "activity",
+    "group": "Outdoor",
+    "searchTerms": ["hiking", "hike", "trail walking", "trekking"],
+    "compendiumCode": {
+      "value": "17082",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 5.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 17082"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.225007,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "hiking",
+    "shareRowId": "hiking",
+    "catalogActivityId": "hiking",
+    "metId": "hiking",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "hiking",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "golf",
+    "name": "Golf",
+    "kind": "activity",
+    "group": "Sports",
+    "searchTerms": ["golf", "golfing", "driving range"],
+    "compendiumCode": {
+      "value": "15255",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 4.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 15255"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.078634,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "golf",
+    "shareRowId": "golf",
+    "catalogActivityId": "golf",
+    "metId": "golf",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "golf",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "fishing",
+    "name": "Fishing",
+    "kind": "activity",
+    "group": "Outdoor",
+    "searchTerms": ["fishing", "angling", "fly fishing"],
+    "compendiumCode": {
+      "value": "04001",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 3.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 04001"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.376712,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "fishing",
+    "shareRowId": "fishing",
+    "catalogActivityId": "fishing",
+    "metId": "fishing",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "fishing",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "aerobics",
+    "name": "Aerobics",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["aerobics", "aerobic class", "step aerobics", "Zumba"],
+    "compendiumCode": {
+      "value": "02000",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 7.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02000"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.159833,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "aerobics",
+    "shareRowId": "aerobics",
+    "catalogActivityId": "aerobics",
+    "metId": "aerobics",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "aerobics",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "dancing",
+    "name": "Dancing",
+    "kind": "activity",
+    "group": "Cardio",
+    "searchTerms": ["dancing", "dance", "dance class"],
+    "compendiumCode": {
+      "value": "03025",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 4.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 03025"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.370391,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "dancing",
+    "shareRowId": "dancing",
+    "catalogActivityId": "dancing",
+    "metId": "dancing",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "dancing",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "downhill_skiing",
+    "name": "Skiing",
+    "kind": "activity",
+    "group": "Outdoor",
+    "searchTerms": ["skiing", "downhill skiing", "snowboarding", "ski"],
+    "compendiumCode": {
+      "value": "19160",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 6.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 19160"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.194251,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "downhill_skiing",
+    "shareRowId": "downhill_skiing",
+    "catalogActivityId": "downhill_skiing",
+    "metId": "downhill_skiing",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "downhill_skiing",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "bowling",
+    "name": "Bowling",
+    "kind": "activity",
+    "group": "Sports",
+    "searchTerms": ["bowling", "tenpin"],
+    "compendiumCode": {
+      "value": "15092",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 3.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 15092"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.073964,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "bowling",
+    "shareRowId": "bowling",
+    "catalogActivityId": "bowling",
+    "metId": "bowling",
+    "lowN": true,
+    "activityToSharePairing": {
+      "value": "bowling",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "martial_arts",
+    "name": "Martial Arts",
+    "kind": "activity",
+    "group": "Sports",
+    "searchTerms": [
+      "martial arts",
+      "karate",
+      "taekwondo",
+      "judo",
+      "jiu-jitsu",
+      "kickboxing"
+    ],
+    "compendiumCode": {
+      "value": "15430",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 10.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 15430"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.207896,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "martial_arts",
+    "shareRowId": "martial_arts",
+    "catalogActivityId": "martial_arts",
+    "metId": "martial_arts",
+    "lowN": true,
+    "activityToSharePairing": {
+      "value": "martial_arts",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "rock_climbing",
+    "name": "Climbing",
+    "kind": "activity",
+    "group": "Outdoor",
+    "searchTerms": ["climbing", "rock climbing", "bouldering", "climbing gym"],
+    "compendiumCode": {
+      "value": "15537",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "2024 Adult Compendium code list https://pacompendium.com/wp-content/uploads/2025/02/1_2024-adult-compendium_1_2024.pdf"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 5.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 15537"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.176882,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "spec §12: sdlog = ln(hi/lo)/(2×1.598) from MET_range_across_codes (ASSUMPTION)"
+        ]
+      },
+      "sigmaSource": "range89"
+    },
+    "shareRow": "rock_climbing",
+    "shareRowId": "rock_climbing",
+    "catalogActivityId": "rock_climbing",
+    "metId": "rock_climbing",
+    "lowN": true,
+    "activityToSharePairing": {
+      "value": "rock_climbing",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
+    ]
+  },
+  {
+    "id": "yard_work",
+    "name": "Yard Work",
+    "kind": "activity",
+    "group": "Outdoor",
+    "searchTerms": ["yard work", "yardwork", "raking", "mowing", "lawn care"],
+    "compendiumCode": {
+      "value": "08261",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Yardwork, general, moderate"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 4,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 08261"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4: CV 0.20 → sdlog = sqrt(log(1+CV²))"]
+      },
+      "sigmaSource": "cv0.20",
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["spec §12 / model.R A4"]
+      }
+    },
+    "shareRow": "yard_work",
+    "shareRowId": "yard_work",
+    "catalogActivityId": "yard_work",
+    "metId": "yard",
+    "lowN": false,
+    "activityToSharePairing": {
+      "value": "yard_work",
+      "status": "ASSUMPTION",
+      "sourceRefs": [
+        "activity_catalog.csv",
+        "spec §12 data-driven catalog (ASSUMPTION pairings)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "activity_catalog.csv",
+      "spec.md §12"
     ]
   }
 ]

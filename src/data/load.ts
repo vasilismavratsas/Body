@@ -34,3 +34,9 @@ export function getShareRow(id: string): ShareRow {
   if (!row) throw new Error(`Unknown share row: ${id}`);
   return row;
 }
+
+export function getLiftParent(): Activity {
+  const a = activities.find((x) => x.kind === 'liftParent');
+  if (!a) throw new Error('No liftParent activity in catalog');
+  return a;
+}

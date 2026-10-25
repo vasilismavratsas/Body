@@ -141,9 +141,9 @@
       "shareRowId": {
         "value": "lying",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Direct match",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -233,9 +233,9 @@
       "shareRowId": {
         "value": "standing",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Grooming/dressing dominates the non-sleep personal care category",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -325,9 +325,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Most eating is seated",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -417,9 +417,9 @@
       "shareRowId": {
         "value": "household",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Population-average housework assumed light; vacuuming (05043) is 3.0",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -509,9 +509,9 @@
       "shareRowId": {
         "value": "household",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "The general/light cooking code fits a mix of standing and sitting",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -601,9 +601,9 @@
       "shareRowId": {
         "value": "gardening",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "General moderate gardening",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -693,9 +693,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Paperwork and bills are desk-type work",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -785,9 +785,9 @@
       "shareRowId": {
         "value": "household",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Pets/vehicle/repair mix; ASSUMED",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -877,9 +877,9 @@
       "shareRowId": {
         "value": "walking",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "CHANGED from 05060 (3.3): ATUS purchasing includes non-food shopping and waiting; 05065 non-food shopping standing/walking=2.3. Still ignores travel (16010 driving 2.0)",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -969,9 +969,9 @@
       "shareRowId": {
         "value": "household",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1061,9 +1061,9 @@
       "shareRowId": {
         "value": "household",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1153,9 +1153,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Population is mostly desk work; MAJOR uncertainty (11600=1.8; 11610=3.3)",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1245,9 +1245,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Sitting in class",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1337,9 +1337,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Mostly seated with talking",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1429,9 +1429,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Seated conversation",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1521,9 +1521,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Direct match",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1613,9 +1613,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Reassigned to sitting for the non-exerciser baseline",
+      "mappingRationale": "moved verbatim from model_v6.R A2 (researcher reassigned to 07021)",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1705,9 +1705,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Reading/computer/games; reading alone is 09030=1.0",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1797,9 +1797,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Direct match",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
@@ -1889,9 +1889,9 @@
       "shareRowId": {
         "value": "sitting",
         "status": "ASSUMPTION",
-        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+        "sourceRefs": ["baseline_row_map.csv", "spec §12 / model.R A2"]
       },
-      "mappingRationale": "Unknown activities defaulted to sitting",
+      "mappingRationale": "moved verbatim from model_v6.R A2",
       "status": "cited",
       "sourceRefs": [
         "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",

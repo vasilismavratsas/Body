@@ -1,5 +1,5 @@
 {
-  "version": "0.6.1",
+  "version": "0.7",
   "energyMode": {
     "value": "net",
     "status": "cited",
@@ -8,7 +8,7 @@
   "nDraws": {
     "value": 4000,
     "status": "ASSUMPTION",
-    "sourceRefs": ["model.R A9", "data-model v0.6.1"]
+    "sourceRefs": ["model.R A9", "data-model v0.7"]
   },
   "intervalProb": {
     "value": 0.89,
@@ -19,13 +19,13 @@
     "phi": {
       "value": 0.25,
       "status": "ASSUMPTION",
-      "sourceRefs": ["model.R A6"]
+      "sourceRefs": ["model.R A6", "spec §16 P1"]
     }
   },
   "metCv": {
     "value": 0.2,
     "status": "ASSUMPTION",
-    "sourceRefs": ["model.R A4"]
+    "sourceRefs": ["model.R A4", "spec §12"]
   },
   "metSigmaLog": {
     "value": 0.198042,
@@ -36,6 +36,13 @@
     "value": 1.5,
     "status": "ASSUMPTION",
     "sourceRefs": ["model.R A5b"]
+  },
+  "shareRule": {
+    "assumedIndexScale": {
+      "value": 2,
+      "status": "ASSUMPTION",
+      "sourceRefs": ["spec §11 / model.R A11: assumed indices ×2 onto %MVIC"]
+    }
   },
   "colorScale": {
     "bandEdges": {
@@ -73,5 +80,15 @@
     "value": 2026,
     "status": "ASSUMPTION",
     "sourceRefs": ["model.R set.seed(2026)"]
+  },
+  "lowNThreshold": {
+    "value": 10,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["spec §12 / model.R A11"]
+  },
+  "swapFrom": {
+    "value": "tv",
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A11 swap_from"]
   }
 }
