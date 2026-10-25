@@ -1,0 +1,98 @@
+[
+  {
+    "id": "arms",
+    "label": "Arms",
+    "muscleMassFraction": {
+      "value": 0.148,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  },
+  {
+    "id": "shoulders",
+    "label": "Shoulders",
+    "muscleMassFraction": {
+      "value": 0.0634,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  },
+  {
+    "id": "chest",
+    "label": "Chest",
+    "muscleMassFraction": {
+      "value": 0.0528,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  },
+  {
+    "id": "upper_back",
+    "label": "Upper back",
+    "muscleMassFraction": {
+      "value": 0.074,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  },
+  {
+    "id": "core",
+    "label": "Core",
+    "muscleMassFraction": {
+      "value": 0.0423,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  },
+  {
+    "id": "lower_back",
+    "label": "Lower back",
+    "muscleMassFraction": {
+      "value": 0.0423,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  },
+  {
+    "id": "hips_glutes",
+    "label": "Hips & glutes",
+    "muscleMassFraction": {
+      "value": 0.1443,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  },
+  {
+    "id": "legs",
+    "label": "Legs",
+    "muscleMassFraction": {
+      "value": 0.4329,
+      "status": "stand-in",
+      "sourceRefs": [
+        "muscle_mass_8part_v1.csv average row",
+        "Janssen 2000; NHANES DXA; ASSUMED sub-splits (method_log mass_1–mass_7)"
+      ]
+    }
+  }
+]
