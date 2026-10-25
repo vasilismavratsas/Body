@@ -1,0 +1,1903 @@
+{
+  "population": {
+    "value": "IPUMS ATUS 2024, adults 18+, WT06, 0 min ATUS 1301 (sports/exercise participation)",
+    "status": "cited",
+    "sourceRefs": [
+      "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+    ]
+  },
+  "designEffect": {
+    "value": 1.5,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A5b: deff for WT06 weights (no replicate weights)"]
+  },
+  "perPersonGross": {
+    "sd": {
+      "value": 4.4,
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv per_person_gross_sd"
+      ]
+    },
+    "p10": {
+      "value": 28.22,
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+      ]
+    },
+    "p50": {
+      "value": 32.6,
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+      ]
+    },
+    "p90": {
+      "value": 38.8,
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+      ]
+    }
+  },
+  "totalNetMetH": {
+    "value": 9.2,
+    "status": "cited",
+    "sourceRefs": [
+      "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+      "TOTAL_net"
+    ]
+  },
+  "totalGrossMetH": {
+    "value": 33.2,
+    "status": "cited",
+    "sourceRefs": [
+      "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+      "TOTAL_gross"
+    ]
+  },
+  "groups": [
+    {
+      "activityId": "sleep",
+      "atusCode": {
+        "value": "sleep",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "07030",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Direct match"
+        ]
+      },
+      "met": {
+        "value": 1,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 07030"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 543.9,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 142.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 535,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 390,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 720,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.9990000000000001,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "lying",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Direct match",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "personal_care_nonsleep",
+      "atusCode": {
+        "value": "personal_care_nonsleep",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "13040",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Grooming/dressing dominates the non-sleep personal care category"
+        ]
+      },
+      "met": {
+        "value": 2,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 13040"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 44.6,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 55.9,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 30,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 90,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.7879999999999999,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "standing",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Grooming/dressing dominates the non-sleep personal care category",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "eating",
+      "atusCode": {
+        "value": "eating",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "13030",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Most eating is seated"
+        ]
+      },
+      "met": {
+        "value": 1.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 13030"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 73.2,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 61.7,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 60,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 15,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 145,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.953,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Most eating is seated",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "housework",
+      "atusCode": {
+        "value": "housework",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "05040",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Population-average housework assumed light; vacuuming (05043) is 3.0"
+        ]
+      },
+      "met": {
+        "value": 2.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05040"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 39.3,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 81.7,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 130,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.37200000000000005,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "household",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Population-average housework assumed light; vacuuming (05043) is 3.0",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "food_prep",
+      "atusCode": {
+        "value": "food_prep",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "05050",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "The general/light cooking code fits a mix of standing and sitting"
+        ]
+      },
+      "met": {
+        "value": 2,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05050"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 40.7,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 57.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 20,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 110,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.638,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "household",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "The general/light cooking code fits a mix of standing and sitting",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "lawn_garden",
+      "atusCode": {
+        "value": "lawn_garden",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "08245",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "General moderate gardening"
+        ]
+      },
+      "met": {
+        "value": 3.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 08245"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 12.5,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 53.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.094,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "gardening",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "General moderate gardening",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "hh_management",
+      "atusCode": {
+        "value": "hh_management",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "09040",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Paperwork and bills are desk-type work"
+        ]
+      },
+      "met": {
+        "value": 1.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 09040"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 11.7,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 42.8,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 30,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.21600000000000003,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Paperwork and bills are desk-type work",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "hh_other_residual",
+      "atusCode": {
+        "value": "hh_other_residual",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "05025",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Pets/vehicle/repair mix; ASSUMED"
+        ]
+      },
+      "met": {
+        "value": 2.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05025"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 24.7,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 72.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 70,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.302,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "household",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Pets/vehicle/repair mix; ASSUMED",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "purchasing",
+      "atusCode": {
+        "value": "purchasing",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "05065",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "CHANGED from 05060 (3.3): ATUS purchasing includes non-food shopping and waiting; 05065 non-food shopping standing/walking=2.3. Still ignores travel (16010 driving 2.0)"
+        ]
+      },
+      "met": {
+        "value": 2.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05065"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 42,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 77.5,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 140,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.39899999999999997,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "walking",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "CHANGED from 05060 (3.3): ATUS purchasing includes non-food shopping and waiting; 05065 non-food shopping standing/walking=2.3. Still ignores travel (16010 driving 2.0)",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "care_household",
+      "atusCode": {
+        "value": "care_household",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "05184",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound"
+        ]
+      },
+      "met": {
+        "value": 2.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05184"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 33.8,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 91,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 123,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.23199999999999998,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "household",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "care_nonhousehold",
+      "atusCode": {
+        "value": "care_nonhousehold",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "05184",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound"
+        ]
+      },
+      "met": {
+        "value": 2.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05184"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 10.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 51.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.083,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "household",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "CHANGED from 05186 (3.5): 05184 child care infant general=2.5; 05185 sitting child care=2.0 is lower bound",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "work",
+      "atusCode": {
+        "value": "work",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "11580",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Population is mostly desk work; MAJOR uncertainty (11600=1.8; 11610=3.3)"
+        ]
+      },
+      "met": {
+        "value": 1.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 11580"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 219.7,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 278.1,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 616,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.445,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Population is mostly desk work; MAJOR uncertainty (11600=1.8; 11610=3.3)",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "education",
+      "atusCode": {
+        "value": "education",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "09065",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Sitting in class"
+        ]
+      },
+      "met": {
+        "value": 1.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 09065"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 14.9,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 77,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.055,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Sitting in class",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "org_civic_religious",
+      "atusCode": {
+        "value": "org_civic_religious",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "09055",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Mostly seated with talking"
+        ]
+      },
+      "met": {
+        "value": 1.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 09055"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 19.2,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 70,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 45,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.126,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Mostly seated with talking",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "socializing",
+      "atusCode": {
+        "value": "socializing",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "09055",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Seated conversation"
+        ]
+      },
+      "met": {
+        "value": 1.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 09055"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 32.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 79.7,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 120,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.282,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Seated conversation",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "tv",
+      "atusCode": {
+        "value": "tv",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "07020",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Direct match"
+        ]
+      },
+      "met": {
+        "value": 1,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 07020"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 163.1,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 183.2,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 120,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 420,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.727,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Direct match",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "sports_exercise",
+      "atusCode": {
+        "value": "sports_exercise",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "07021",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Reassigned to sitting for the non-exerciser baseline"
+        ]
+      },
+      "met": {
+        "value": 1,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 07021"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 1.6,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 20.8,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.009000000000000001,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Reassigned to sitting for the non-exerciser baseline",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "other_leisure_residual",
+      "atusCode": {
+        "value": "other_leisure_residual",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "09040",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Reading/computer/games; reading alone is 09030=1.0"
+        ]
+      },
+      "met": {
+        "value": 1.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 09040"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 92.4,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 143,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 30,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 282,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.6,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Reading/computer/games; reading alone is 09030=1.0",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "phone_mail",
+      "atusCode": {
+        "value": "phone_mail",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "09055",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Direct match"
+        ]
+      },
+      "met": {
+        "value": 1.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 09055"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 7.6,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 30.3,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 15,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.11800000000000001,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Direct match",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    },
+    {
+      "activityId": "other_nec",
+      "atusCode": {
+        "value": "other_nec",
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "compendiumCode": {
+        "value": "07021",
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "Unknown activities defaulted to sitting"
+        ]
+      },
+      "met": {
+        "value": 1,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 07021"
+        ]
+      },
+      "minutes": {
+        "mean": {
+          "value": 12.3,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "sd": {
+          "value": 48.1,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+            "atus_nonexercisers_v2.csv"
+          ]
+        },
+        "median": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p10": {
+          "value": 0,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        },
+        "p90": {
+          "value": 35,
+          "status": "cited",
+          "sourceRefs": [
+            "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+          ]
+        }
+      },
+      "participationRate": {
+        "value": 0.151,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+          "atus_nonexercisers_v2.csv participation_rate_pct / 100"
+        ]
+      },
+      "n": {
+        "value": 5973,
+        "status": "cited",
+        "sourceRefs": [
+          "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed."
+        ]
+      },
+      "shareRowId": {
+        "value": "sitting",
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A2 ATUS category → share row mapping"]
+      },
+      "mappingRationale": "Unknown activities defaulted to sitting",
+      "status": "cited",
+      "sourceRefs": [
+        "Sarah M. Flood, Liana C. Sayer, and Daniel Backman. IPUMS ATUS 2024 extract (DOI 10.18128/D060.V3.3). Derived aggregates only; raw microdata not redistributed.",
+        "nonexerciser_baseline_v2.csv",
+        "atus_nonexercisers_v2.csv"
+      ]
+    }
+  ]
+}

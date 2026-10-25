@@ -1,0 +1,77 @@
+{
+  "version": "0.6.1",
+  "energyMode": {
+    "value": "net",
+    "status": "cited",
+    "sourceRefs": ["spec.md §1", "model.R"]
+  },
+  "nDraws": {
+    "value": 4000,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A9", "data-model v0.6.1"]
+  },
+  "intervalProb": {
+    "value": 0.89,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["spec.md §4", "data-model"]
+  },
+  "offset": {
+    "phi": {
+      "value": 0.25,
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A6"]
+    }
+  },
+  "metCv": {
+    "value": 0.2,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A4"]
+  },
+  "metSigmaLog": {
+    "value": 0.198042,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A4"]
+  },
+  "designEffect": {
+    "value": 1.5,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A5b"]
+  },
+  "colorScale": {
+    "bandEdges": {
+      "value": [1.15, 1.4, 1.8],
+      "status": "ASSUMPTION",
+      "sourceRefs": ["spec.md §5", "model.R A7"]
+    },
+    "bandNames": {
+      "value": ["green", "yellow-green", "orange", "red"],
+      "status": "ASSUMPTION",
+      "sourceRefs": ["spec.md §5"]
+    },
+    "mCap": {
+      "value": 2.5,
+      "status": "ASSUMPTION",
+      "sourceRefs": ["spec.md §5", "model.R A7"]
+    },
+    "rampStops": {
+      "value": ["#2E7D32", "#FBC02D", "#C62828"],
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R color_of continuous log2 ramp stops"]
+    }
+  },
+  "highUncertaintyLog2Width": {
+    "value": 2,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A8", "spec.md §5"]
+  },
+  "massSex": {
+    "value": "average",
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R A10"]
+  },
+  "seedDefault": {
+    "value": 2026,
+    "status": "ASSUMPTION",
+    "sourceRefs": ["model.R set.seed(2026)"]
+  }
+}

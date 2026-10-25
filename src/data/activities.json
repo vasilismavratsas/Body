@@ -1,0 +1,542 @@
+[
+  {
+    "id": "walk_brisk",
+    "name": "Walking",
+    "top10Rank": 1,
+    "compendiumCode": {
+      "value": "17200",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Walking, 3.5-3.9 mph, brisk, exercise"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 4.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 17200"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "walking",
+    "activityToSharePairing": {
+      "value": "walking",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 43.9,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "jog",
+    "name": "Running / jogging",
+    "top10Rank": 2,
+    "compendiumCode": {
+      "value": "12020",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Jogging, general, self-selected"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 7.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 12020"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "running",
+    "activityToSharePairing": {
+      "value": "running",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 11.6,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "resist_multi",
+    "name": "Weightlifting",
+    "top10Rank": 3,
+    "compendiumCode": {
+      "value": "02054",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Resistance training, multiple exercises, 8-15 reps"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 3.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02054"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "weightlifting",
+    "activityToSharePairing": {
+      "value": "weightlifting",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 10.7,
+      "status": "cited",
+      "sourceRefs": [
+        "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0345026",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "garden",
+    "name": "Gardening",
+    "top10Rank": 4,
+    "compendiumCode": {
+      "value": "08245",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Gardening, general, moderate"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 3.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 08245"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "gardening",
+    "activityToSharePairing": {
+      "value": "gardening",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 5.8,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "bike_leisure",
+    "name": "Bicycling",
+    "top10Rank": 5,
+    "compendiumCode": {
+      "value": "01010",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Bicycling, <10 mph, leisure"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 4,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 01010"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "bicycling",
+    "activityToSharePairing": {
+      "value": "bicycling",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 3.8,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "yard",
+    "name": "Yard work",
+    "top10Rank": 6,
+    "compendiumCode": {
+      "value": "08261",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Yardwork, general, moderate"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 4,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 08261"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "gardening",
+    "activityToSharePairing": {
+      "value": "gardening",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 2.8,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "chore_clean_light",
+    "name": "Household activities",
+    "top10Rank": 7,
+    "compendiumCode": {
+      "value": "05040",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Cleaning, general, light"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 2.5,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 05040"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "household",
+    "activityToSharePairing": {
+      "value": "household",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 2.6,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "calisthenics_mod",
+    "name": "Calisthenics",
+    "top10Rank": 8,
+    "compendiumCode": {
+      "value": "02022",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Calisthenics, moderate"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 3.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02022"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "calisthenics",
+    "activityToSharePairing": {
+      "value": "calisthenics",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 2.4,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "yoga_hatha",
+    "name": "Yoga",
+    "top10Rank": 9,
+    "compendiumCode": {
+      "value": "02150",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Yoga, Hatha"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 2.3,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 02150"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "yoga",
+    "activityToSharePairing": {
+      "value": "yoga",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 2.2,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  },
+  {
+    "id": "indoor_bike_general",
+    "name": "Indoor biking",
+    "top10Rank": 10,
+    "compendiumCode": {
+      "value": "01200",
+      "status": "cited",
+      "sourceRefs": [
+        "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+        "Bicycling, stationary, general"
+      ]
+    },
+    "met": {
+      "median": {
+        "value": 6.8,
+        "status": "cited",
+        "sourceRefs": [
+          "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+          "code 01200"
+        ]
+      },
+      "sigmaLog": {
+        "value": 0.198042,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "model.R A4: Compendium SD is GAP; CV 0.20 → sdlog = sqrt(log(1+CV²))"
+        ]
+      },
+      "cv": {
+        "value": 0.2,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A4"]
+      }
+    },
+    "shareRowId": "indoor_biking",
+    "activityToSharePairing": {
+      "value": "indoor_biking",
+      "status": "ASSUMPTION",
+      "sourceRefs": ["model.R A3 activity→share pairing (ASSUMPTION)"]
+    },
+    "prevalencePct": {
+      "value": 2.2,
+      "status": "cited",
+      "sourceRefs": [
+        "https://doi.org/10.1249/01.mss.0000981132.53032.99",
+        "BRFSS 2019 top-2 activities (top10.csv)"
+      ]
+    },
+    "sourceRefs": [
+      "Herrmann SD et al., 2024, 2024 Adult Compendium of Physical Activities, https://doi.org/10.1016/j.jshs.2023.10.010",
+      "top10.csv",
+      "model.R A3"
+    ]
+  }
+]

@@ -1,0 +1,1452 @@
+{
+  "walking": {
+    "id": "walking",
+    "sbar": {
+      "arms": {
+        "value": 0.0339,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "Collins 2009 minimal shoulder torque",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "shoulders": {
+        "value": 0.0145,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["Collins 2009", "share_1 (mass x index, normalized)"]
+      },
+      "chest": {
+        "value": 0.0081,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["walking chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.0226,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["walking upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.0161,
+        "status": "stand-in",
+        "sourceRefs": [
+          "White & McNair 2002 Clin Biomech (abdominals <5% MVC walking) Clin Biomech 17:177-184 (copy: https://studyres.com/doc/4295915/abdominal-and-erector-spinae-muscle-activity-during)",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "lower_back": {
+        "value": 0.0323,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "ES bursts near foot strike per White&McNair; magnitude assumed",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "hips_glutes": {
+        "value": 0.2181,
+        "status": "stand-in",
+        "sourceRefs": [
+          "APNM thigh/hip value reused",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.6544,
+        "status": "cited",
+        "sourceRefs": [
+          "APNM 2025 https://doi.org/10.1139/apnm-2025-0097 walking thigh/hip mean %MVC",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "stand-in",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "stand-in",
+      "legs": "cited"
+    },
+    "sourceRefs": [
+      "Collins 2009 minimal shoulder torque",
+      "Collins 2009",
+      "White & McNair 2002 Clin Biomech (abdominals <5% MVC walking) Clin Biomech 17:177-184 (copy: https://studyres.com/doc/4295915/abdominal-and-erector-spinae-muscle-activity-during)",
+      "ES bursts near foot strike per White&McNair; magnitude assumed",
+      "APNM thigh/hip value reused",
+      "APNM 2025 https://doi.org/10.1139/apnm-2025-0097 walking thigh/hip mean %MVC"
+    ]
+  },
+  "running": {
+    "id": "running",
+    "sbar": {
+      "arms": {
+        "value": 0.0439,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "Arellano&Kram 2014 arm swing active",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "shoulders": {
+        "value": 0.0235,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["running shoulders share", "share_1 (mass x index, normalized)"]
+      },
+      "chest": {
+        "value": 0.0078,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["running chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.0219,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["running upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.0157,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["running core share", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.0313,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["running lower_back share", "share_1 (mass x index, normalized)"]
+      },
+      "hips_glutes": {
+        "value": 0.214,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["running hips_glutes share", "share_1 (mass x index, normalized)"]
+      },
+      "legs": {
+        "value": 0.6419,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["~2x walking", "share_1 (mass x index, normalized)"]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "ASSUMPTION"
+    },
+    "sourceRefs": ["Arellano&Kram 2014 arm swing active", "~2x walking"]
+  },
+  "weightlifting": {
+    "id": "weightlifting",
+    "sbar": {
+      "arms": {
+        "value": 0.148,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "shoulders": {
+        "value": 0.0634,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "chest": {
+        "value": 0.0528,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "upper_back": {
+        "value": 0.074,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "core": {
+        "value": 0.0423,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "lower_back": {
+        "value": 0.0423,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "hips_glutes": {
+        "value": 0.1443,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.4329,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "general whole-body program assumed equal intensity",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "ASSUMPTION"
+    },
+    "sourceRefs": ["general whole-body program assumed equal intensity"]
+  },
+  "gardening": {
+    "id": "gardening",
+    "sbar": {
+      "arms": {
+        "value": 0.2708729127087291,
+        "status": "stand-in",
+        "sourceRefs": [
+          "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "shoulders": {
+        "value": 0.0966903309669033,
+        "status": "stand-in",
+        "sourceRefs": [
+          "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "chest": {
+        "value": 0.025797420257974202,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["gardening chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.06769323067693231,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["gardening upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.025797420257974202,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["gardening core share", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.0643935606439356,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["stooped work", "share_1 (mass x index, normalized)"]
+      },
+      "hips_glutes": {
+        "value": 0.131986801319868,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "gardening hips_glutes share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.3167683231676833,
+        "status": "stand-in",
+        "sourceRefs": [
+          "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted) lower limb lower than upper",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "stand-in",
+      "shoulders": "stand-in",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "stand-in"
+    },
+    "sourceRefs": [
+      "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)",
+      "stooped work",
+      "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted) lower limb lower than upper"
+    ]
+  },
+  "bicycling": {
+    "id": "bicycling",
+    "sbar": {
+      "arms": {
+        "value": 0.032203220322032204,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["handlebar support", "share_1 (mass x index, normalized)"]
+      },
+      "shoulders": {
+        "value": 0.0138013801380138,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["bicycling shoulders share", "share_1 (mass x index, normalized)"]
+      },
+      "chest": {
+        "value": 0.005700570057005701,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["bicycling chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.016101610161016102,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["bicycling upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.0115011501150115,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["bicycling core share", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.0184018401840184,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["bicycling lower_back share", "share_1 (mass x index, normalized)"]
+      },
+      "hips_glutes": {
+        "value": 0.19611961196119612,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "bicycling hips_glutes share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.7061706170617061,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["bicycling legs share", "share_1 (mass x index, normalized)"]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "ASSUMPTION"
+    },
+    "sourceRefs": ["handlebar support"]
+  },
+  "yard_work": {
+    "id": "yard_work",
+    "sbar": {
+      "arms": {
+        "value": 0.2708729127087291,
+        "status": "stand-in",
+        "sourceRefs": [
+          "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "shoulders": {
+        "value": 0.0966903309669033,
+        "status": "stand-in",
+        "sourceRefs": [
+          "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "chest": {
+        "value": 0.025797420257974202,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["yard_work chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.06769323067693231,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["yard_work upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.025797420257974202,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["yard_work core share", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.0643935606439356,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["stooped work", "share_1 (mass x index, normalized)"]
+      },
+      "hips_glutes": {
+        "value": 0.131986801319868,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "yard_work hips_glutes share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.3167683231676833,
+        "status": "stand-in",
+        "sourceRefs": [
+          "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted) lower limb lower than upper",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "stand-in",
+      "shoulders": "stand-in",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "stand-in"
+    },
+    "sourceRefs": [
+      "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted)",
+      "stooped work",
+      "Park 2014 Kor J Hort Sci https://doi.org/10.7235/hort.2014.14059 (abstract: forearm/anterior deltoid highest; tables not extracted) lower limb lower than upper"
+    ]
+  },
+  "household": {
+    "id": "household",
+    "sbar": {
+      "arms": {
+        "value": 0.2141,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["household arms share", "share_1 (mass x index, normalized)"]
+      },
+      "shoulders": {
+        "value": 0.0734,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["household shoulders share", "share_1 (mass x index, normalized)"]
+      },
+      "chest": {
+        "value": 0.0255,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["household chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.0571,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["household upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.0245,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["household core share", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.0489,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["household lower_back share", "share_1 (mass x index, normalized)"]
+      },
+      "hips_glutes": {
+        "value": 0.1391,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "household hips_glutes share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.4174,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["household legs share", "share_1 (mass x index, normalized)"]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "ASSUMPTION"
+    },
+    "sourceRefs": []
+  },
+  "calisthenics": {
+    "id": "calisthenics",
+    "sbar": {
+      "arms": {
+        "value": 0.1865,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["push-up/dip", "share_1 (mass x index, normalized)"]
+      },
+      "shoulders": {
+        "value": 0.07,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "calisthenics shoulders share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "chest": {
+        "value": 0.0666,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["calisthenics chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.0582,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "calisthenics upper_back share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "core": {
+        "value": 0.0466,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["plank/sit-up", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.0266,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "calisthenics lower_back share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "hips_glutes": {
+        "value": 0.1364,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["squat/lunge", "share_1 (mass x index, normalized)"]
+      },
+      "legs": {
+        "value": 0.4091,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["calisthenics legs share", "share_1 (mass x index, normalized)"]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "ASSUMPTION"
+    },
+    "sourceRefs": ["push-up/dip", "plank/sit-up", "squat/lunge"]
+  },
+  "yoga": {
+    "id": "yoga",
+    "sbar": {
+      "arms": {
+        "value": 0.127012701270127,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "not measured; plank/chaturanga assumed ~core-legs level",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "shoulders": {
+        "value": 0.054405440544054405,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["not measured", "share_1 (mass x index, normalized)"]
+      },
+      "chest": {
+        "value": 0.037803780378037805,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["not measured", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.08390839083908391,
+        "status": "cited",
+        "sourceRefs": [
+          "Mullerpatan 2020 Int J Yoga PMC7336940 mean of lower trapezius 41.9, latissimus 37.4",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "core": {
+        "value": 0.0276027602760276,
+        "status": "cited",
+        "sourceRefs": [
+          "Mullerpatan 2020 Int J Yoga PMC7336940 rectus abdominis",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "lower_back": {
+        "value": 0.07820782078207822,
+        "status": "cited",
+        "sourceRefs": [
+          "Mullerpatan 2020 Int J Yoga PMC7336940 erector spinae max pose",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "hips_glutes": {
+        "value": 0.15891589158915892,
+        "status": "cited",
+        "sourceRefs": [
+          "Mullerpatan 2020 Int J Yoga PMC7336940 gluteus maximus",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.4321432143214321,
+        "status": "cited",
+        "sourceRefs": [
+          "Mullerpatan 2020 Int J Yoga PMC7336940 vastus lateralis",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "cited",
+      "core": "cited",
+      "lower_back": "cited",
+      "hips_glutes": "cited",
+      "legs": "cited"
+    },
+    "sourceRefs": [
+      "not measured; plank/chaturanga assumed ~core-legs level",
+      "not measured",
+      "Mullerpatan 2020 Int J Yoga PMC7336940 mean of lower trapezius 41.9, latissimus 37.4",
+      "Mullerpatan 2020 Int J Yoga PMC7336940 rectus abdominis",
+      "Mullerpatan 2020 Int J Yoga PMC7336940 erector spinae max pose",
+      "Mullerpatan 2020 Int J Yoga PMC7336940 gluteus maximus",
+      "Mullerpatan 2020 Int J Yoga PMC7336940 vastus lateralis"
+    ]
+  },
+  "indoor_biking": {
+    "id": "indoor_biking",
+    "sbar": {
+      "arms": {
+        "value": 0.032203220322032204,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["handlebar support", "share_1 (mass x index, normalized)"]
+      },
+      "shoulders": {
+        "value": 0.0138013801380138,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "indoor_biking shoulders share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "chest": {
+        "value": 0.005700570057005701,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["indoor_biking chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.016101610161016102,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "indoor_biking upper_back share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "core": {
+        "value": 0.0115011501150115,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["indoor_biking core share", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.0184018401840184,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "indoor_biking lower_back share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "hips_glutes": {
+        "value": 0.19611961196119612,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "indoor_biking hips_glutes share",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.7061706170617061,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["indoor_biking legs share", "share_1 (mass x index, normalized)"]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "ASSUMPTION"
+    },
+    "sourceRefs": ["handlebar support"]
+  },
+  "sitting": {
+    "id": "sitting",
+    "sbar": {
+      "arms": {
+        "value": 0.05540554055405541,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["sitting arms share", "share_1 (mass x index, normalized)"]
+      },
+      "shoulders": {
+        "value": 0.04750475047504751,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["neck/trapezius tone", "share_1 (mass x index, normalized)"]
+      },
+      "chest": {
+        "value": 0.019801980198019806,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["sitting chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.08320832083208321,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["sitting upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.04750475047504751,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["O'Sullivan 2006", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.20602060206020603,
+        "status": "cited",
+        "sourceRefs": [
+          "O'Sullivan PB et al. 2006 Spine 31:E707-12 https://doi.org/10.1097/01.brs.0000234735.98075.50 Discussion p.E709-710: superficial lumbar multifidus 13% MVIC in slump and thoracic upright sitting; n=22 pain-free adults",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "hips_glutes": {
+        "value": 0.1351135113511351,
+        "status": "stand-in",
+        "sourceRefs": ["APNM thigh/hip reused", "share_1 (mass x index, normalized)"]
+      },
+      "legs": {
+        "value": 0.40544054405440544,
+        "status": "cited",
+        "sourceRefs": [
+          "APNM 2025 https://doi.org/10.1139/apnm-2025-0097 sitting thigh/hip",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "cited",
+      "hips_glutes": "stand-in",
+      "legs": "cited"
+    },
+    "sourceRefs": [
+      "neck/trapezius tone",
+      "O'Sullivan 2006",
+      "O'Sullivan PB et al. 2006 Spine 31:E707-12 https://doi.org/10.1097/01.brs.0000234735.98075.50 Discussion p.E709-710: superficial lumbar multifidus 13% MVIC in slump and thoracic upright sitting; n=22 pain-free adults",
+      "APNM thigh/hip reused",
+      "APNM 2025 https://doi.org/10.1139/apnm-2025-0097 sitting thigh/hip"
+    ]
+  },
+  "standing": {
+    "id": "standing",
+    "sbar": {
+      "arms": {
+        "value": 0.032703270327032706,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["standing arms share", "share_1 (mass x index, normalized)"]
+      },
+      "shoulders": {
+        "value": 0.028102810281028102,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["standing shoulders share", "share_1 (mass x index, normalized)"]
+      },
+      "chest": {
+        "value": 0.011701170117011701,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["standing chest share", "share_1 (mass x index, normalized)"]
+      },
+      "upper_back": {
+        "value": 0.049004900490049005,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["standing upper_back share", "share_1 (mass x index, normalized)"]
+      },
+      "core": {
+        "value": 0.028002800280028002,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["standing core share", "share_1 (mass x index, normalized)"]
+      },
+      "lower_back": {
+        "value": 0.046704670467046704,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["standing lower_back share", "share_1 (mass x index, normalized)"]
+      },
+      "hips_glutes": {
+        "value": 0.2009200920092009,
+        "status": "stand-in",
+        "sourceRefs": ["APNM reused", "share_1 (mass x index, normalized)"]
+      },
+      "legs": {
+        "value": 0.6028602860286029,
+        "status": "cited",
+        "sourceRefs": [
+          "APNM 2025 https://doi.org/10.1139/apnm-2025-0097 standing thigh/hip; Tikkanen 2013 https://doi.org/10.1371/journal.pone.0052228 standing ~2.5x sitting",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 20,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 50,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "stand-in",
+      "legs": "cited"
+    },
+    "sourceRefs": [
+      "APNM reused",
+      "APNM 2025 https://doi.org/10.1139/apnm-2025-0097 standing thigh/hip; Tikkanen 2013 https://doi.org/10.1371/journal.pone.0052228 standing ~2.5x sitting"
+    ]
+  },
+  "lying": {
+    "id": "lying",
+    "sbar": {
+      "arms": {
+        "value": 0.148,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "shoulders": {
+        "value": 0.0634,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "chest": {
+        "value": 0.0528,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "upper_back": {
+        "value": 0.074,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "core": {
+        "value": 0.0423,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "lower_back": {
+        "value": 0.0423,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "hips_glutes": {
+        "value": 0.1443,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      },
+      "legs": {
+        "value": 0.4329,
+        "status": "ASSUMPTION",
+        "sourceRefs": [
+          "near-rest; equal tone -> pure mass weighting",
+          "share_1 (mass x index, normalized)"
+        ]
+      }
+    },
+    "kappa": {
+      "arms": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "shoulders": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "chest": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "upper_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "core": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "lower_back": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "hips_glutes": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      },
+      "legs": {
+        "value": 5,
+        "status": "ASSUMPTION",
+        "sourceRefs": ["model.R A1: kappa cited=50 / stand-in=20 / ASSUMPTION=5"]
+      }
+    },
+    "cellStatus": {
+      "arms": "ASSUMPTION",
+      "shoulders": "ASSUMPTION",
+      "chest": "ASSUMPTION",
+      "upper_back": "ASSUMPTION",
+      "core": "ASSUMPTION",
+      "lower_back": "ASSUMPTION",
+      "hips_glutes": "ASSUMPTION",
+      "legs": "ASSUMPTION"
+    },
+    "sourceRefs": ["near-rest; equal tone -> pure mass weighting"]
+  }
+}
